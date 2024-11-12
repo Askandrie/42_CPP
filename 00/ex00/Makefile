@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aska <aska@student.42.fr>                  +#+  +:+       +#+         #
+#    By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:53:10 by aska              #+#    #+#              #
-#    Updated: 2024/11/01 12:12:43 by aska             ###   ########.fr        #
+#    Updated: 2024/11/12 17:39:58 by ygaiffie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,8 @@ clean:
 fclean: clean
 	@rm -f $(NAME)
 	@echo "$(BRED)$(NAME) removed completely$(NC)\n"
+
+re: fclean all
 
 init:
 	@echo "\n\t$(BMAG)Starting $(NAME) compilation$(NC) [C++]\n"
