@@ -6,7 +6,7 @@
 #    By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:53:10 by aska              #+#    #+#              #
-#    Updated: 2024/11/13 15:44:45 by ygaiffie         ###   ########.fr        #
+#    Updated: 2024/11/13 15:59:06 by ygaiffie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ NAME	:=	BraiiiiiiinnnzzzZ
 
 SRCS	:=	Zombie.cpp \
 			newZombie.cpp \
+			randomChump.cpp \
 			main.cpp
 
 HEADERS	:=	Zombie.hpp
