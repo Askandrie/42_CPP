@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Colors.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:37:44 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/12 13:43:18 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2024/11/13 01:40:39 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,31 +28,33 @@ const std::string MAG = "\033[35m";
 const std::string CYN = "\033[36m";
 const std::string WHT = "\033[37m";
 
-const std::string BBLK = "\033[1,30m";
-const std::string BRED = "\033[1,31m";
-const std::string BGRN = "\033[1,32m";
-const std::string BYEL = "\033[1,33m";
-const std::string BBLU = "\033[1,34m";
-const std::string BMAG = "\033[1,35m";
-const std::string BCYN = "\033[1,36m";
-const std::string BWHT = "\033[1,37m";
+const std::string BBLK = "\033[1;30m";
+const std::string BRED = "\033[1;31m";
+const std::string BGRN = "\033[1;32m";
+const std::string BYEL = "\033[1;33m";
+const std::string BBLU = "\033[1;34m";
+const std::string BMAG = "\033[1;35m";
+const std::string BCYN = "\033[1;36m";
+const std::string BWHT = "\033[1;37m";
 
-const std::string HBLK = "\033[0,90m";
-const std::string HRED = "\033[0,91m";
-const std::string HGRN = "\033[0,92m";
-const std::string HYEL = "\033[0,93m";
-const std::string HBLU = "\033[0,94m";
-const std::string HMAG = "\033[0,95m";
-const std::string HCYN = "\033[0,96m";
-const std::string HWHT = "\033[0,97m";
+const std::string HBLK = "\033[0;90m";
+const std::string HRED = "\033[0;91m";
+const std::string HGRN = "\033[0;92m";
+const std::string HYEL = "\033[0;93m";
+const std::string HBLU = "\033[0;94m";
+const std::string HMAG = "\033[0;95m";
+const std::string HCYN = "\033[0;96m";
+const std::string HWHT = "\033[0;97m";
 
-const std::string BHBLK = "\033[1,90m";
-const std::string BHRED = "\033[1,91m";
-const std::string BHGRN = "\033[1,92m";
-const std::string BHYEL = "\033[1,93m";
-const std::string BHBLU = "\033[1,94m";
-const std::string BHMAG = "\033[1,95m";
-const std::string BHCYN = "\033[1,96m";
-const std::string BHWHT = "\033[1,97m";
+const std::string BHBLK = "\033[1;90m";
+const std::string BHRED = "\033[1;91m";
+const std::string BHGRN = "\033[1;92m";
+const std::string BHYEL = "\033[1;93m";
+const std::string BHBLU = "\033[1;94m";
+const std::string BHMAG = "\033[1;95m";
+const std::string BHCYN = "\033[1;96m";
+const std::string BHWHT = "\033[1;97m";
+
+const std::string SECRET = "\033[37;47m";
 
 #endif

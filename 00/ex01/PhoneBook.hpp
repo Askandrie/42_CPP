@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:02:25 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/12 18:24:54 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2024/11/13 01:36:34 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 # include <iostream>
 # include <string>
 # include <iomanip>
-
+# include <cstdlib>
 
 # define MAX_CONTACTS 8
-# define AUTHORIZE_CHARS "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
+# define AUTHORIZE_CHARS "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_+- "
 class PhoneBook
 {
   public:
@@ -29,13 +29,12 @@ class PhoneBook
 	~PhoneBook();
 	void Start();
 	void AddContact();
-	void SearchContact();
+	void SearchContact(std::string command);
 	void Exit();
 
   private:
 	Contact contacts[MAX_CONTACTS];
 	int ContactCount;
-	int ContactCursor;
 };
 
 #endif

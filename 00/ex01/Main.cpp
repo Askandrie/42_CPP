@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 03:54:19 by aska              #+#    #+#             */
-/*   Updated: 2024/11/12 17:39:26 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2024/11/13 01:37:32 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,16 @@ int main()
 	{
 		std::string command;
 		std::cout << "Usage:\t" << BOLD << "ADD, SEARCH, EXIT" << std::endl;
-		std::cout <<RESET << "Enter a command:\t";
+		std::cout <<RESET << "Enter a command: ";
 		std::getline(std::cin, command);
+		if (std::cin.eof())
+			break;
 		if (command == "ADD")
 			PhoneBook.AddContact();
 		else if (command == "SEARCH")
-			PhoneBook.SearchContact();
+			PhoneBook.SearchContact(command);
+		else if (command == "PRETTY")
+			PhoneBook.SearchContact(command);
 		else if (command == "EXIT")
 		{
 			PhoneBook.Exit();

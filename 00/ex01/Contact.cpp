@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:02:11 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/12 18:30:17 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2024/11/13 01:46:14 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,14 +56,20 @@ std::string Contact::GetNickname()
 	return (Nickname);
 }
 
-
-
-void Contact::PrintContact(Contact contact)
+void Contact::PrintContact()
 {
-	std::cout << "\nContact " << BYEL << contact.Index << ":" << std::endl;
-	std::cout << "First Name: " << BYEL << contact.FirstName << std::endl;
-	std::cout << "Last Name: " << BYEL << contact.LastName << std::endl;
-	std::cout << "Nickname: " << BYEL << contact.Nickname << std::endl;
-	std::cout << "Phone Number: " << BYEL << contact.PhoneNumber << std::endl;
-	std::cout << "Secret: " << BYEL << contact.DarkestSecret << std::endl;
+	std::cout << HBLU << "\nINDEX\t\t: " << WHT << Index + 1 << std::endl;
+	std::cout << HBLU << "First Name\t: " << WHT << FirstName << std::endl;
+	std::cout << HBLU << "Last Name\t: " << WHT << LastName << std::endl;
+	std::cout << HBLU << "Nickname\t: " << WHT << Nickname << std::endl;
+	std::cout << HBLU << "Phone Number\t: " << WHT << PhoneNumber << std::endl;
+	std::cout << HBLU << "Secret\t\t: " << WHT << DarkestSecret << RESET << std::endl;
+}
+
+void Contact::PrintPrettyContact()
+{
+	std::cout << HBLU << "\n\tNAME\t" << HWHT << ": " << FirstName << " " << LastName 
+	<< HBLU << " A.K.A " << BHRED << "\"" << Nickname << "\"" << RESET << std::endl << "\n\t 📱\t: "
+	<< HWHT << PhoneNumber << RESET << std::endl << "\n\t 🤫\t: " << SECRET << DarkestSecret
+	<< RESET << std::endl;
 }
