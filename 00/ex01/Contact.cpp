@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:02:11 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/13 01:46:14 by aska             ###   ########.fr       */
+/*   Updated: 2024/11/13 12:09:35 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,4 @@ void Contact::PrintContact()
 	std::cout << HBLU << "Nickname\t: " << WHT << Nickname << std::endl;
 	std::cout << HBLU << "Phone Number\t: " << WHT << PhoneNumber << std::endl;
 	std::cout << HBLU << "Secret\t\t: " << WHT << DarkestSecret << RESET << std::endl;
-}
-
-void Contact::PrintPrettyContact()
-{
-	std::cout << HBLU << "\n\tNAME\t" << HWHT << ": " << FirstName << " " << LastName 
-	<< HBLU << " A.K.A " << BHRED << "\"" << Nickname << "\"" << RESET << std::endl << "\n\t 📱\t: "
-	<< HWHT << PhoneNumber << RESET << std::endl << "\n\t 🤫\t: " << SECRET << DarkestSecret
-	<< RESET << std::endl;
 }

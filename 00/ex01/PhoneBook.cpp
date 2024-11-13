@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:02:22 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/13 01:37:04 by aska             ###   ########.fr       */
+/*   Updated: 2024/11/13 12:10:20 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 PhoneBook::PhoneBook()
 {
-	ContactCount = 0;
+	ContactCount = ContactIndex = 0;
 }
 
 PhoneBook::~PhoneBook()
@@ -32,7 +32,7 @@ void PhoneBook::Exit()
 {
 	std::cout << std::endl;
 	std::cout << HMAG << "\t\t┍━━━━━━»•» 🌸 «•«━┑" << std::endl;
-	std::cout << HMAG << "\t\t Have a good day !" << std::endl;
+	std::cout << BHWHT << "\t\t Have a good day !" << std::endl;
 	std::cout << HMAG << "\t\t┕━»•» 🌸 «•«━━━━━━┙" << RESET << std::endl;
 }
 
@@ -65,8 +65,6 @@ void PhoneBook::AddContact()
 	std::string PhoneNumber;
 	std::string DarkestSecret;
 	
-	if (ContactCount == 8)
-		ContactCount = 0;
 	std::cout << YEL << "First name\t: " << RESET;
 	FirstName = getFinalLine("First name");
 	if (FirstName.empty())
@@ -87,9 +85,12 @@ void PhoneBook::AddContact()
 	DarkestSecret = getFinalLine("Secret");
 	if (DarkestSecret.empty())
 		return ;
-	contacts[ContactCount] = Contact(ContactCount, FirstName, LastName,
+	contacts[ContactIndex] = Contact(ContactIndex, FirstName, LastName,
 			Nickname, PhoneNumber, DarkestSecret);
-	ContactCount++;
+	if (++ContactCount == MAX_CONTACTS)
+		ContactCount = 7;
+	if (++ContactIndex == MAX_CONTACTS)
+		ContactIndex = 0;
 	std::cout << HGRN << "Contact added successfully.\n" << RESET << std::endl;
 }
 
@@ -106,11 +107,12 @@ void	PrintPreviewSearch(Contact contacts[], int ContactCount)
 	int i = 0;
 
 	std::cout << std::endl;
+	std::cout << HWHT << "┍━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━»•» 📒 «•«━┑" << std::endl;
 	std::cout << std::right
 	<< HBLU << std::setw(10) << "Index" << BWHT << "|"
 	<< HBLU << std::setw(10) << "First Name" << BWHT << "|" 
 	<< HBLU << std::setw(10) << "Last Name" << BWHT << "|"
-	<< HBLU << std::setw(10) << "Nickname" << BWHT << "|" << std::endl;
+	<< HBLU << std::setw(10) << "Nickname" << BWHT << std::endl;
 	
 	for (i = 0; i < ContactCount; i++)
 	{
@@ -118,12 +120,14 @@ void	PrintPreviewSearch(Contact contacts[], int ContactCount)
 		<< std::setw(10) << contacts[i].GetIndex() + 1 << BWHT << "|" << RESET
 		<< std::setw(10) << formatColumn(contacts[i].GetFirstName(), 10) << BWHT << "|" << RESET
 		<< std::setw(10) << formatColumn(contacts[i].GetLastName(), 10) << BWHT << "|" << RESET
-		<< std::setw(10) << formatColumn(contacts[i].GetNickname(), 10) << BWHT << "|" <<RESET << std::endl;
+		<< std::setw(10) << formatColumn(contacts[i].GetNickname(), 10) << BWHT <<RESET << std::endl;
 	}
+	std::cout << HWHT << "┕━»•» 📒 «•«━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┙" << RESET << std::endl;
+
 	std::cout << std::endl;
 }
 
-void PhoneBook::SearchContact(std::string command)
+void PhoneBook::SearchContact()
 {
 	PrintPreviewSearch(contacts, ContactCount);
 	if (ContactCount == 0)
@@ -139,8 +143,6 @@ void PhoneBook::SearchContact(std::string command)
 		std::cout << RED << "Invalid index.\n" << RESET << std::endl;
 		return ;
 	}
-	if (command == "PRETTY")
-		contacts[atoi(Index.c_str()) - 1].PrintPrettyContact();
 	else
 		contacts[atoi(Index.c_str()) - 1].PrintContact();
 	std::cout << std::endl;

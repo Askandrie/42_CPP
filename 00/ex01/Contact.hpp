@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:02:15 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/13 01:27:51 by aska             ###   ########.fr       */
+/*   Updated: 2024/11/13 12:09:42 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class Contact
             const std::string& darkest_secret);
 		~Contact();
 		void PrintContact();
-		void PrintPrettyContact();
 		int GetIndex();
 		std::string GetFirstName();
 		std::string GetLastName();

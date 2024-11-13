@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 03:54:19 by aska              #+#    #+#             */
-/*   Updated: 2024/11/13 01:37:32 by aska             ###   ########.fr       */
+/*   Updated: 2024/11/13 12:10:06 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ int main()
 		if (command == "ADD")
 			PhoneBook.AddContact();
 		else if (command == "SEARCH")
-			PhoneBook.SearchContact(command);
-		else if (command == "PRETTY")
-			PhoneBook.SearchContact(command);
+			PhoneBook.SearchContact();
 		else if (command == "EXIT")
 		{
 			PhoneBook.Exit();
