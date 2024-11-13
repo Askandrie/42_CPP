@@ -6,7 +6,7 @@
 /*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:08:58 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/13 16:35:27 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2024/11/13 17:02:02 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,10 @@
 
 int main()
 {
-	Zombie zombie("Hachi");
-	zombie.announce();
+	Zombie* hordeZombie = zombieHorde(10, "Ichi");
 
-	randomChump("Roku");
+	hordeZombie[2].announce();
 
-	Zombie *zombie1 = newZombie("Nana");
-	zombie1->announce();
-
-	delete zombie1;
+	delete[] hordeZombie;
 	return 0;
-	
 }

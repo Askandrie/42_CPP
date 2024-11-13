@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/13 14:08:58 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/13 16:35:27 by ygaiffie         ###   ########.fr       */
+/*   Created: 2024/11/13 16:37:54 by ygaiffie          #+#    #+#             */
+/*   Updated: 2024/11/13 16:57:56 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
+Zombie* zombieHorde( int N, std::string name )
 {
-	Zombie zombie("Hachi");
-	zombie.announce();
 
-	randomChump("Roku");
+	Zombie *hordeZombie = new Zombie[N];
 
-	Zombie *zombie1 = newZombie("Nana");
-	zombie1->announce();
-
-	delete zombie1;
-	return 0;
-	
+	for (int i = 0; i != N; i++)
+		hordeZombie[i].SetName(name);
+	return hordeZombie;
 }
