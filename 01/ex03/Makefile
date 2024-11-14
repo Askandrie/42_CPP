@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aska <aska@student.42.fr>                  +#+  +:+       +#+         #
+#    By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:53:10 by aska              #+#    #+#              #
-#    Updated: 2024/11/13 22:11:02 by aska             ###   ########.fr        #
+#    Updated: 2024/11/14 12:51:34 by ygaiffie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,11 +20,16 @@ NC		:=	\033[0m
 CC		:=	g++
 CFLAGS  :=  -Wall -Werror -Wextra -g -std=c++98
 
-NAME	:=	HI_THIS_IS_BRAIN
+NAME	:=	Unnecessary_violence
 
-SRCS	:=	main.cpp
+SRCS	:=	main.cpp \
+			HumanA.cpp \
+			HumanB.cpp \
+			Weapon.cpp
 
-HEADERS	:=	
+HEADERS	:=	HumanA.hpp \
+			HumanB.hpp \
+			Weapon.hpp
 			
 OBJS	:=	$(SRCS:.cpp=.o)
 
