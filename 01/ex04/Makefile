@@ -6,7 +6,7 @@
 #    By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:53:10 by aska              #+#    #+#              #
-#    Updated: 2024/11/14 16:46:39 by ygaiffie         ###   ########.fr        #
+#    Updated: 2024/11/14 16:30:30 by ygaiffie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,16 +20,11 @@ NC		:=	\033[0m
 CC		:=	g++
 CFLAGS  :=  -Wall -Werror -Wextra -g -std=c++98
 
-NAME	:=	phonebook
+NAME	:=	SedIsForLosers
 
-SRCS	:=	PhoneBook.cpp \
-			Contact.cpp \
-			main.cpp
+SRCS	:=	main.cpp 
 
-HEADERS	:=	PhoneBook.hpp \
-			Contact.hpp \
-			Colors.hpp \
-			main.hpp
+HEADERS	:=	
 			
 OBJS	:=	$(SRCS:.cpp=.o)
 
