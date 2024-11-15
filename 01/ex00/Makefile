@@ -6,7 +6,7 @@
 #    By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:53:10 by aska              #+#    #+#              #
-#    Updated: 2024/11/13 15:59:06 by ygaiffie         ###   ########.fr        #
+#    Updated: 2024/11/15 16:15:16 by ygaiffie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ BMAG	:=	\033[1;35m
 BOLD	:=	\033[1m
 NC		:=	\033[0m
 
-CC		:=	g++
+CXX		:=	c++
 CFLAGS  :=  -Wall -Werror -Wextra -g -std=c++98
 
 NAME	:=	BraiiiiiiinnnzzzZ
@@ -35,12 +35,12 @@ all: init $(NAME) finish
 
 %.o: %.cpp $(HEADERS)
 	@echo -n "Compiling :\t$(CYN)$<...$(NC)"
-	@$(CC) $(CFLAGS) -o $@ -c $<
+	@$(CXX) $(CFLAGS) -o $@ -c $<
 	@echo "\t$(BGRN)successfully$(NC)"
 
 $(NAME): $(OBJS)
 	@echo -n "\nLinking :\t$(CYN)$(OBJS)...$(NC)"
-	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	@$(CXX) $(CFLAGS) $(OBJS) -o $(NAME)
 	@echo "\t$(BGRN)successfully$(NC)\n"
 
 clean:

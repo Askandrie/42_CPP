@@ -6,7 +6,7 @@
 #    By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:53:10 by aska              #+#    #+#              #
-#    Updated: 2024/11/15 16:15:16 by ygaiffie         ###   ########.fr        #
+#    Updated: 2024/11/15 16:14:26 by ygaiffie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,11 +20,12 @@ NC		:=	\033[0m
 CXX		:=	c++
 CFLAGS  :=  -Wall -Werror -Wextra -g -std=c++98
 
-NAME	:=	HI_THIS_IS_BRAIN
+NAME	:=	HarlFilter
 
-SRCS	:=	main.cpp
+SRCS	:=	main.cpp \
+			Harl.cpp
 
-HEADERS	:=	
+HEADERS	:=	Harl.hpp
 			
 OBJS	:=	$(SRCS:.cpp=.o)
 
