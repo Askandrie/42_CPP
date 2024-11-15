@@ -6,7 +6,7 @@
 #    By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:53:10 by aska              #+#    #+#              #
-#    Updated: 2024/11/15 16:14:26 by ygaiffie         ###   ########.fr        #
+#    Updated: 2024/11/15 17:52:33 by ygaiffie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,9 +23,10 @@ CFLAGS  :=  -Wall -Werror -Wextra -g -std=c++98
 NAME	:=	HarlFilter
 
 SRCS	:=	main.cpp \
-			Harl.cpp
+			Fixed.cpp
 
-HEADERS	:=	Harl.hpp
+HEADERS	:=	Colors.hpp \
+			Fixed.hpp
 			
 OBJS	:=	$(SRCS:.cpp=.o)
 
