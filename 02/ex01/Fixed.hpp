@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:50:19 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/16 02:32:10 by aska             ###   ########.fr       */
+/*   Updated: 2024/11/16 02:58:31 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class Fixed
 {
 	public:
 		Fixed(); // Constructeur par default
+		Fixed(int fixed_point); // Constructeur par default
 		Fixed(const Fixed &origin); // Constructeur par copie
 		Fixed &operator=(const Fixed &origin); // Operateur d'affectation par copie
 		~Fixed(); // Destructeur

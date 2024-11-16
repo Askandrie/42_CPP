@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:48:21 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/16 02:45:55 by aska             ###   ########.fr       */
+/*   Updated: 2024/11/16 03:00:18 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 Fixed::Fixed() : fixed_point(0)
 {
 	std::cout << HBLU << "Default Constructor Called" << RESET << std::endl;
+}
+
+Fixed::Fixed(int fixed_point) : fixed_point(fixed_point)
+{
+	std::cout << HBLU << "Int Constructor Called" << RESET << std::endl;
 }
 
 Fixed::Fixed(const Fixed &origin)

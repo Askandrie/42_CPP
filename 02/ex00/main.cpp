@@ -5,18 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/15 11:55:23 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/15 21:58:24 by aska             ###   ########.fr       */
+/*   Created: 2024/11/16 00:44:18 by aska              #+#    #+#             */
+/*   Updated: 2024/11/16 00:50:40 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include <iostream>
+#include "Fixed.hpp"
 
-int main(int argc, char **argv)
+int main(void)
 {
-	if (argc != 2)
-		return (1);
-	Harl harl; 
-	harl.complain(argv[1]);
-	return 0;
+    Fixed a;
+    Fixed b(a);
+    Fixed c;
+    c = b;
+    std::cout << a.getRawBits() << std::endl;
+    std::cout << b.getRawBits() << std::endl;
+    std::cout << c.getRawBits() << std::endl;
+    return 0;
 }
