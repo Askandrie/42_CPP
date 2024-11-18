@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:48:21 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/16 03:00:18 by aska             ###   ########.fr       */
+/*   Updated: 2024/11/18 10:13:41 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@ Fixed::Fixed() : fixed_point(0)
 	std::cout << HBLU << "Default Constructor Called" << RESET << std::endl;
 }
 
-Fixed::Fixed(int fixed_point) : fixed_point(fixed_point)
+Fixed::Fixed(int i)
 {
 	std::cout << HBLU << "Int Constructor Called" << RESET << std::endl;
+	fixed_point = i << (fractional_bit - 1);
 }
 
 Fixed::Fixed(const Fixed &origin)
@@ -51,4 +52,9 @@ void Fixed::setRawBits(const int raw)
 {
 	std::cout << HGRN << "setRawBits member function called" << RESET << std::endl;
 	fixed_point = raw;
+}
+
+int Fixed::toInt()
+{
+	return fixed_point >> fractional_bit;//a finir
 }
