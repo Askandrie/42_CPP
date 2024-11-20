@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:48:21 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/18 10:13:41 by aska             ###   ########.fr       */
+/*   Updated: 2024/11/20 01:49:05 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,14 @@ Fixed::Fixed() : fixed_point(0)
 Fixed::Fixed(int i)
 {
 	std::cout << HBLU << "Int Constructor Called" << RESET << std::endl;
-	fixed_point = i << (fractional_bit - 1);
+	fixed_point = i << fractional_bit;
+	// fixed_point = i << (fractional_bit - 1);
+}
+
+Fixed::Fixed(float f)
+{
+	std::cout << HBLU << "Float Constructor Called" << RESET << std::endl;
+	fixed_point = f * (1 << fractional_bit);
 }
 
 Fixed::Fixed(const Fixed &origin)
@@ -35,6 +42,19 @@ Fixed &Fixed::operator=(const Fixed &origin)
 	std::cout << MAG << "Copy Assigment Constructor Called" << RESET << std::endl;
 	this->fixed_point = origin.fixed_point;
 	return *this;
+}
+
+Fixed &Fixed::operator<<(const Fixed &origin)
+{
+
+    if (origin.getRawBits() < 0 || origin.getRawBits() >= 31)
+    {
+        // Handle invalid shift amounts
+        return *this;
+    }
+
+    this->fixed_point <<= origin.getRawBits();
+    return *this;
 }
 
 Fixed::~Fixed()
@@ -56,5 +76,10 @@ void Fixed::setRawBits(const int raw)
 
 int Fixed::toInt()
 {
-	return fixed_point >> fractional_bit;//a finir
+	return (float)fixed_point / (1 << fractional_bit);
+}
+
+float Fixed::toFloat()
+{
+	return (float)fixed_point / (1 << fractional_bit);
 }

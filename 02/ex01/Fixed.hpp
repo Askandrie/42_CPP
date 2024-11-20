@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:50:19 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/18 09:46:43 by aska             ###   ########.fr       */
+/*   Updated: 2024/11/19 22:42:56 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Fixed
 		Fixed(float f); // Constructeur avec argument
 		Fixed(const Fixed &origin); // Constructeur par copie
 		Fixed &operator=(const Fixed &origin); // Operateur d'affectation par copie
+		Fixed &operator<<(const Fixed &origin); // Operateur 
 		~Fixed(); // Destructeur
 		// Fixed(Fixed &&) noexcept; // Constructeur par deplacement
 		// Fixed &operator=(Fixed &&) noexcept; // Operateur d'affectation par deplacement
@@ -32,7 +33,7 @@ class Fixed
 		float	toFloat();
 		
 	private:
-		int fixed_point; 
+		int fixed_point;
 		static const int fractional_bit = 8;
 };
 
