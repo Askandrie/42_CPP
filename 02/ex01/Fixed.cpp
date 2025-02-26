@@ -6,12 +6,11 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:48:21 by ygaiffie          #+#    #+#             */
-/*   Updated: 2025/02/26 11:57:37 by aska             ###   ########.fr       */
+/*   Updated: 2025/02/26 12:24:45 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <iostream>
 
 Fixed::Fixed() : fixed_point(0)
 {
@@ -27,7 +26,7 @@ Fixed::Fixed(int i)
 Fixed::Fixed(float f)
 {
 	std::cout << HBLU << "Float Constructor Called" << RESET << std::endl;
-	fixed_point = f * (1 << fractional_bit);
+	fixed_point = (int)roundf(f * (1 << fractional_bit));
 }
 
 Fixed::Fixed(const Fixed &origin)

@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:50:19 by ygaiffie          #+#    #+#             */
-/*   Updated: 2025/02/26 12:19:26 by aska             ###   ########.fr       */
+/*   Updated: 2025/02/26 21:54:00 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,41 @@ class Fixed
 
 		Fixed &operator=(const Fixed &origin); // Operateur d'affectation par copie
 		~Fixed(); // Destructeur
+
 		int		getRawBits();
 		void	setRawBits(const int raw);
+		
 		int		toInt() const ;
 		float	toFloat() const ;
+
+		bool	operator>(const Fixed &f) const;
+		bool	operator<(const Fixed &f) const;
+		bool	operator>=(const Fixed &f) const;
+		bool	operator<=(const Fixed &f) const;
+		bool	operator==(const Fixed &f) const;
+		bool	operator!=(const Fixed &f) const;
 		
-	private:
+		Fixed	operator+(const Fixed &f) const;
+		Fixed	operator-(const Fixed &f) const;
+		Fixed	operator*(const Fixed &f) const;
+		Fixed	operator/(const Fixed &f) const;
+
+		Fixed	&operator++();
+		Fixed	operator++(int);
+		Fixed	&operator--();
+		Fixed	operator--(int);
+
+		static Fixed &min(Fixed &a, Fixed &b);
+		static Fixed &max(Fixed &a, Fixed &b);
+		static const Fixed &min(const Fixed &a, const Fixed &b);
+		static const Fixed &max(const Fixed &a, const Fixed &b);
+		
+		private:
 		int fixed_point;
 		static const int fractional_bit = 8;
-
-};
-
+		
+	};
+	
 std::ostream &operator<<(std::ostream &o, Fixed const &f);
 
 #endif
