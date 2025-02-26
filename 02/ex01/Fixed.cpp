@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:48:21 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/20 01:49:05 by aska             ###   ########.fr       */
+/*   Updated: 2025/02/26 11:57:37 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ Fixed::Fixed(int i)
 {
 	std::cout << HBLU << "Int Constructor Called" << RESET << std::endl;
 	fixed_point = i << fractional_bit;
-	// fixed_point = i << (fractional_bit - 1);
 }
 
 Fixed::Fixed(float f)
@@ -37,24 +36,14 @@ Fixed::Fixed(const Fixed &origin)
 	fixed_point = origin.fixed_point;
 }
 
-Fixed &Fixed::operator=(const Fixed &origin)
+int Fixed::toInt() const
 {
-	std::cout << MAG << "Copy Assigment Constructor Called" << RESET << std::endl;
-	this->fixed_point = origin.fixed_point;
-	return *this;
+	return fixed_point >> fractional_bit;
 }
 
-Fixed &Fixed::operator<<(const Fixed &origin)
+float Fixed::toFloat() const
 {
-
-    if (origin.getRawBits() < 0 || origin.getRawBits() >= 31)
-    {
-        // Handle invalid shift amounts
-        return *this;
-    }
-
-    this->fixed_point <<= origin.getRawBits();
-    return *this;
+	return (float)fixed_point / (1 << fractional_bit);
 }
 
 Fixed::~Fixed()
@@ -74,12 +63,16 @@ void Fixed::setRawBits(const int raw)
 	fixed_point = raw;
 }
 
-int Fixed::toInt()
+
+Fixed &Fixed::operator=(const Fixed &origin)
 {
-	return (float)fixed_point / (1 << fractional_bit);
+	std::cout << MAG << "Copy Assigment Constructor Called" << RESET << std::endl;
+	if (this != &origin)
+		this->fixed_point = origin.fixed_point;
+	return *this;
 }
 
-float Fixed::toFloat()
-{
-	return (float)fixed_point / (1 << fractional_bit);
+std::ostream&	operator<<(std::ostream& o, Fixed const &f) {
+	o << f.toFloat();
+	return o;
 }

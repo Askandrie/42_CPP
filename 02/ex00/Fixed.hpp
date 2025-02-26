@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:50:19 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/16 02:32:10 by aska             ###   ########.fr       */
+/*   Updated: 2025/02/26 03:04:16 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define FIXED_HPP
 
 #include "Colors.hpp"
+
+#define FRACTIONAL_BITS 8
 
 class Fixed
 {
@@ -29,7 +31,7 @@ class Fixed
 		
 	private:
 		int fixed_point;
-		static const int fractional_bit = 8;
+		static const int fractional_bit = FRACTIONAL_BITS;
 };
 
 #endif

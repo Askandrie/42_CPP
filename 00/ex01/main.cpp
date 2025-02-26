@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Main.cpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 03:54:19 by aska              #+#    #+#             */
-/*   Updated: 2024/11/13 12:10:06 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/02/26 02:05:32 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Main.hpp"
+#include "main.hpp"
 
 int main()
 {
@@ -19,9 +19,9 @@ int main()
 	PhoneBook.Start();
 	while (1)
 	{
-		std::string command;
 		std::cout << "Usage:\t" << BOLD << "ADD, SEARCH, EXIT" << std::endl;
-		std::cout <<RESET << "Enter a command: ";
+		std::cout << RESET << "Enter a command: ";
+		std::string command;
 		std::getline(std::cin, command);
 		if (std::cin.eof())
 			break;
@@ -37,5 +37,5 @@ int main()
 		else
 			std::cout << RED <<"Invalid command." << RESET << std::endl;
 	}
-	return 0;
+	return EXIT_SUCCESS;
 }
