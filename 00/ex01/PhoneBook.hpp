@@ -6,7 +6,7 @@
 /*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:02:25 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/13 12:10:12 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/02/27 11:19:11 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class PhoneBook
 	~PhoneBook();
 	void Start();
 	void AddContact();
-	void FillContacts();
 	void SearchContact();
 	void Exit();
 

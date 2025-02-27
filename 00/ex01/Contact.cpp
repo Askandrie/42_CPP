@@ -6,7 +6,7 @@
 /*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:02:11 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/13 12:09:35 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/02/27 11:25:21 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,11 @@ std::string Contact::GetNickname()
 
 void Contact::PrintContact()
 {
+	if (FirstName.empty())
+	{
+		std::cout << BHRED << "No contact found." << RESET << std::endl;
+		return ;
+	}
 	std::cout << HBLU << "\nINDEX\t\t: " << WHT << Index + 1 << std::endl;
 	std::cout << HBLU << "First Name\t: " << WHT << FirstName << std::endl;
 	std::cout << HBLU << "Last Name\t: " << WHT << LastName << std::endl;

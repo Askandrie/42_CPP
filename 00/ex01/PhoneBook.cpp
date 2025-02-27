@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:02:22 by ygaiffie          #+#    #+#             */
-/*   Updated: 2025/02/26 02:19:54 by aska             ###   ########.fr       */
+/*   Updated: 2025/02/27 11:32:57 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void PhoneBook::Exit()
 std::string getFinalLine(std::string input)
 {
 	std::string line;
+	std::string::iterator it;
 	std::getline(std::cin, line);
 	if (std::cin.eof())
 		return ("");
@@ -49,7 +50,9 @@ std::string getFinalLine(std::string input)
 	}
 	if (line.length() > 64)
 		line.resize(64);
-	if (line.find_first_not_of(AUTHORIZE_CHARS) != std::string::npos)
+	for (it = line.begin(); it != line.end()&& isprint(*it); it++)
+		;
+	if (it != line.end())
 	{
 		std::cout << RED << "Invalid character in " << input << ".\n" << RESET << std::endl;
 		return ("");
@@ -87,8 +90,8 @@ void PhoneBook::AddContact()
 		return ;
 	contacts[ContactIndex] = Contact(ContactIndex, FirstName, LastName,
 			Nickname, PhoneNumber, DarkestSecret);
-	if (++ContactCount == MAX_CONTACTS)
-		ContactCount = 7;
+	if (++ContactCount >= MAX_CONTACTS)
+	 	ContactCount = MAX_CONTACTS;
 	if (++ContactIndex == MAX_CONTACTS)
 		ContactIndex = 0;
 	std::cout << HGRN << "Contact added successfully.\n" << RESET << std::endl;
