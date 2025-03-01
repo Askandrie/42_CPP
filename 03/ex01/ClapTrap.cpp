@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 16:23:29 by aska              #+#    #+#             */
-/*   Updated: 2025/03/01 01:39:21 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/01 02:58:19 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,17 +96,15 @@ void ClapTrap::beRepaired(unsigned int amount)
         return ;
     }
     hitPoints += amount;
-    if (hitPoints > DEFAULT_CLAPTRAP_HIT_POINTS)
-        hitPoints = DEFAULT_CLAPTRAP_HIT_POINTS;
-    std::cout << "ClapTrap " << HMAG << name << RESET << " repairs itself, regaining " << HGRN << amount << RESET << " hit points!" << std::endl;
+    std::cout << "ClapTrap " << HMAG << name << RESET << " repairs itself, regaining " << GRN << amount << RESET << " hit points!" << std::endl;
 }
 
 void ClapTrap::displayStats()
 {
     std::cout << MAG << name << RESET << std::endl;
-    std::cout << "|---" << HBLU << "HP:\t" << HGRN << hitPoints << RESET << std::endl;
-    std::cout << "|---" << HBLU << "EP:\t" << HGRN << energyPoints << RESET << std::endl;
-    std::cout << "|---" << HBLU << "AD:\t" << HGRN << attackDamage << RESET << std::endl;
+    std::cout << "|---" << HBLU << "HP:\t" << GRN << hitPoints << RESET << std::endl;
+    std::cout << "|---" << HBLU << "EP:\t" << GRN << energyPoints << RESET << std::endl;
+    std::cout << "|---" << HBLU << "AD:\t" << GRN << attackDamage << RESET << std::endl;
     std::cout << std::endl;
 }
 
