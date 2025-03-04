@@ -6,7 +6,7 @@
 #    By: aska <aska@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:53:10 by aska              #+#    #+#              #
-#    Updated: 2025/03/04 01:08:02 by aska             ###   ########.fr        #
+#    Updated: 2025/03/04 02:25:16 by aska             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ CXX		:=	c++
 CXXFLAGS  :=  -Wall -Werror -Wextra -g -std=c++98
 CPPFLAGS  :=  -I. -MMD -MP
 
-NAME	:=	I_don’t_want_to_set_the_world_on_fire
+NAME	:=	Abstract_class
 
 SRCS	:=	main.cpp \
 			Animal.cpp \
