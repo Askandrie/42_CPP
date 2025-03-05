@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:00:41 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/13 17:05:27 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/03/05 12:48:10 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Zombie::Zombie()
 {
-	std::cout << HBLU << "OBJ Created" << RESET << std::endl;
+	std::cout << HBLU << "Zombie Created" << RESET << std::endl;
 }
 
 Zombie::Zombie(std::string name)

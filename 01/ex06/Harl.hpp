@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 16:32:40 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/15 14:10:03 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/03/05 14:01:35 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ const std::string BRED			= "\033[1;31m";
 const std::string BGRN			= "\033[1;32m";
 const std::string BYEL			= "\033[1;33m";
 const std::string BCYN			= "\033[1;36m";
+const std::string RESET 		= "\033[0m";
 
 class Harl
 {

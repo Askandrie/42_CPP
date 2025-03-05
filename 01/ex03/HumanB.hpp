@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 12:12:25 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/14 13:04:48 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/03/05 13:33:00 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class HumanB
 	private:
 		std::string	name;
 		Weapon		*weapon;
+		bool		is_armed;
 };
 
 #endif

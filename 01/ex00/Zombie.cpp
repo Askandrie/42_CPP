@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:00:41 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/13 15:44:14 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/03/05 12:23:16 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ Zombie::Zombie()
 	return;
 }
 
-Zombie::Zombie(std::string name)
+Zombie::Zombie(std::string name) : name(name)
 {
-	this->name = name;
+	std::cout << "Hello i am about to launch an all out attack on your house. Sincerely, " << HYEL << name << std::endl;
 }
 
 Zombie::~Zombie()

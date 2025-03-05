@@ -3,26 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 12:12:25 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/14 13:05:06 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/03/05 13:33:01 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 #include <iostream>
 
-HumanB::HumanB(std::string name) : name(name) {}
-
-HumanB::~HumanB() {}
-
-void	HumanB::attack()
+HumanB::HumanB(std::string name)
 {
-	std::cout << name << " attacks with their " << weapon->getType() << std::endl;
+	this->name = name;
+	this->is_armed = false;
+	std::cout << this->name << " is here" << std::endl;
 }
 
-void	HumanB::setWeapon(Weapon &weapon)
+HumanB::~HumanB(void) {}
+
+void HumanB::setWeapon(Weapon &weapon)
 {
 	this->weapon = &weapon;
+	this->is_armed = true;
+	std::cout << this->name << " loot a " << this->weapon->getType() << std::endl;
+}
+
+void HumanB::attack(void)
+{
+    if (this->is_armed)
+        std::cout << this->name << " attacks with his " << this->weapon->getType() << std::endl;
+    else
+        std::cout << this->name << " attacks with his fists." << std::endl;
 }
