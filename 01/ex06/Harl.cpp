@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 16:40:13 by ygaiffie          #+#    #+#             */
-/*   Updated: 2025/03/05 14:01:47 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/05 16:29:21 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ void Harl::error()
 
 void Harl::complain(std::string level)
 {
-	// ptrFunc tabfunction[] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	ptrFunc tabfunction[] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	std::string tablevel[] = {"DEBUG", "INFO" ,"WARNING" ,"ERROR"};
 	int i = 0;
 
-	while (level != tablevel[i])
+	while (level != tablevel[i] && i < 4)
 		i++;
 	switch (i)
 	{

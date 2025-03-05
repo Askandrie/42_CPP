@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 11:55:23 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/15 21:58:24 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/05 16:26:20 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 int main(int argc, char **argv)
 {
 	if (argc != 2)
+	{
+		std::cout << "INVALID LEVEL" << std::endl;
 		return (1);
-	Harl harl; 
+	}
+	Harl harl;
 	harl.complain(argv[1]);
-	return 0;
+	return EXIT_SUCCESS;
 }

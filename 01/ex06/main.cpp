@@ -6,7 +6,7 @@
 /*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 11:55:23 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/15 15:00:28 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/03/05 16:30:15 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 int main(int argc, char **argv)
 {
 	if (argc != 2)
-		return (1);
+	{
+		std::cout << "INVALID LEVEL" << std::endl;
+		return (EXIT_FAILURE);
+	}
 	Harl harl;
 	harl.complain(argv[1]);
-	return 0;
+	return EXIT_SUCCESS;
 }

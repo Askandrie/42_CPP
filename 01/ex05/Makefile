@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aska <aska@student.42.fr>                  +#+  +:+       +#+         #
+#    By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:53:10 by aska              #+#    #+#              #
-#    Updated: 2025/02/26 02:41:53 by aska             ###   ########.fr        #
+#    Updated: 2025/03/05 16:23:39 by ygaiffie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,32 +32,32 @@ OBJS	:=	$(SRCS:.cpp=.o)
 all: init show_flags $(NAME) finish
 
 %.o: %.cpp $(HEADERS)
-	@echo -e -n " [⧖] Compiling :\t$(CYN)$<...$(NC)"
-	@$(CXX) $(CXXFLAGS) -o $@ -c $< && echo -e "\r [$(BGRN)✓$(NC)]"
+	@echo -n " [⧖] Compiling :\t$(CYN)$<...$(NC)"
+	@$(CXX) $(CXXFLAGS) -o $@ -c $< && echo "\r [$(BGRN)✓$(NC)]"
 
 $(NAME): $(OBJS)
-	@echo -e "\n Linking :\t$(CYN)$(OBJS)...$(NC)"
+	@echo "\n Linking :\t$(CYN)$(OBJS)...$(NC)"
 	@$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	@rm -f *.o
-	@echo -e "$(BRED)Object files removed$(NC)\n"
+	@echo "$(BRED)Object files removed$(NC)\n"
 	
 fclean: clean
 	@rm -f $(NAME)
-	@echo -e "$(BRED)$(NAME) executable removed completely$(NC)\n"
+	@echo "$(BRED)$(NAME) executable removed completely$(NC)\n"
 
 re: fclean all
 
 init:
-	@echo -e "\n\t$(BMAG)Starting $(NAME) compilation$(NC) [C++]\n"
+	@echo "\n\t$(BMAG)Starting $(NAME) compilation$(NC) [C++]\n"
 
 finish:
-	@echo -e "\t$(BGRN)Compilation of $(NAME) completed!$(NC)\n"
+	@echo "\t$(BGRN)Compilation of $(NAME) completed!$(NC)\n"
 
 show_flags:
-	@echo -e -n " Flags used : $(NC)"
-	@echo -e "$(CYN)$(CXX) $(CXXFLAGS)$(NC)\n"
+	@echo -n " Flags used : $(NC)"
+	@echo "$(CYN)$(CXX) $(CXXFLAGS)$(NC)\n"
 
 debug:
 	@$(MAKE) CXXFLAGS+="-g -Wall -Werror -Wextra -std=c++98"
