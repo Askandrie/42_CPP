@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/05 01:52:26 by aska              #+#    #+#             */
-/*   Updated: 2025/03/06 01:07:04 by aska             ###   ########.fr       */
+/*   Created: 2025/03/06 02:04:35 by aska              #+#    #+#             */
+/*   Updated: 2025/03/06 02:06:13 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include "AMateria.hpp"
-#include "ICharacter.hpp"
-#include "Colors.hpp"
-#include <iostream>
 #include <string>
+#include <iostream>
+#include "Colors.hpp"
+#include "AMateria.hpp"
 
-class Cure : public AMateria
+class	AMateria;
+
+class	ICharacter
 {
-    public:
-        Cure();
-        Cure(Cure const & ori);
-        Cure &operator=(Cure const & ori);
-        ~Cure();
-        AMateria* clone() const;
-        void use(ICharacter& target);
-}
+	public:
+		virtual ~ICharacter() {}
+		virtual const std::string &getName() const = 0;
+		virtual void equip(AMateria *materia) = 0;
+		virtual void unequip(int idx) = 0;
+		virtual void use(int idx, ICharacter &target) = 0;
+		virtual AMateria*	getMateria(int idx) const = 0;
+};

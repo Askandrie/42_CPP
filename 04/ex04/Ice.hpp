@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   Ice.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -17,13 +17,13 @@
 #include <iostream>
 #include <string>
 
-class Cure : public AMateria
+class Ice : public AMateria
 {
     public:
-        Cure();
-        Cure(Cure const & ori);
-        Cure &operator=(Cure const & ori);
-        ~Cure();
+        Ice();
+        Ice(Ice const & ori);
+        Ice &operator=(Ice const & ori);
+        ~Ice();
         AMateria* clone() const;
         void use(ICharacter& target);
 }

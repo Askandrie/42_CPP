@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.cpp                                           :+:      :+:    :+:   */
+/*   Ice.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 02:19:12 by aska              #+#    #+#             */
-/*   Updated: 2025/03/06 02:09:35 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/06 01:49:34 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Cure.hpp"
+# include "Ice.hpp"
 
-Cure::Cure() : AMateria("cure")
+Ice::Ice() : AMateria("ice")
 {
-    std::cout << MAG << "Cure" << RESET << "\tdefault constructor called" << std::endl;
+    std::cout << MAG << "Ice" << RESET << "\tdefault constructor called" << std::endl;
 }
-Cure::Cure(Cure const & ori) : AMateria(ori)
+Ice::Ice(Ice const & ori) : AMateria(ori)
 {
-    std::cout << MAG << "Cure" << RESET << "\tcopy constructor called" << std::endl;
+    std::cout << MAG << "Ice" << RESET << "\tcopy constructor called" << std::endl;
 }
-Cure::~Cure()
+Ice::~Ice()
 {
-    std::cout << MAG << "Cure" << RED << "\tdestructor called" << RESET << std::endl;
+    std::cout << MAG << "Ice" << RED << "\tdestructor called" << RESET << std::endl;
 }
-Cure &Cure::operator=(Cure const & ori)
+Ice &Ice::operator=(Ice const & ori)
 {
     if (this != &ori)
         this->_type = ori._type;
     return *this;
 }
-AMateria* Cure::clone() const
+AMateria* Ice::clone() const
 {
-    return new Cure(*this);
+    return new Ice(*this);
 }
-void Cure::use(ICharacter& target)
+void Ice::use(ICharacter& target)
 {
-    std::cout << HGRN << "* heals " << YEL << target.getName() << HGRN << "'s wounds *" << RESET << std::endl;
+    std::cout << HCYN << "* shoots an ice bolt at " << YEL << target.getName() << HCYN << " *" << RESET << std::endl;
 }
