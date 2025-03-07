@@ -6,44 +6,43 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:48:21 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/16 02:45:55 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/07 02:21:45 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <iostream>
 
-Fixed::Fixed() : fixed_point(0)
+Fixed::Fixed() : _fixed_point(0)
 {
-	std::cout << HBLU << "Default Constructor Called" << RESET << std::endl;
+	std::cout << HGRN "Default Constructor Called" RESET << std::endl;
 }
 
-Fixed::Fixed(const Fixed &origin)
+Fixed::Fixed(const Fixed &origin) : _fixed_point(origin._fixed_point)
 {
-	std::cout << HMAG << "Copy Constructor Called" << RESET << std::endl;
-	fixed_point = origin.fixed_point;
+	std::cout << HMAG "Copy Constructor Called" RESET << std::endl;
 }
 
 Fixed &Fixed::operator=(const Fixed &origin)
 {
-	std::cout << MAG << "Copy Assigment Constructor Called" << RESET << std::endl;
-	this->fixed_point = origin.fixed_point;
+	std::cout << MAG "Copy Assigment Constructor Called" RESET << std::endl;
+	this->_fixed_point = origin._fixed_point;
 	return *this;
 }
 
 Fixed::~Fixed()
 {
-	std::cout << RED << "Destructor Called" << RESET << std::endl;
+	std::cout << RED "Destructor Called" RESET << std::endl;
 }
 
 int Fixed::getRawBits()
 {
-	std::cout << HGRN << "getRawBits member function called" << RESET << std::endl;
-	return fixed_point;
+	std::cout << HBLU "getRawBits member function called" RESET << std::endl;
+	return this->_fixed_point;
 }
 
 void Fixed::setRawBits(const int raw)
 {
-	std::cout << HGRN << "setRawBits member function called" << RESET << std::endl;
-	fixed_point = raw;
+	std::cout << HBLU "setRawBits member function called" RESET << std::endl;
+	this->_fixed_point = raw;
 }

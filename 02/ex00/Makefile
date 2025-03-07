@@ -6,7 +6,7 @@
 #    By: aska <aska@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:53:10 by aska              #+#    #+#              #
-#    Updated: 2025/02/26 02:42:09 by aska             ###   ########.fr        #
+#    Updated: 2025/03/07 01:54:38 by aska             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,15 +18,14 @@ BOLD	:=	\033[1m
 NC		:=	\033[0m
 
 CXX		:=	c++
-CFLAGS  :=  -Wall -Werror -Wextra -g -std=c++98
+CXXFLAGS  :=  -Wall -Werror -Wextra -g -std=c++98
 
 NAME	:=	OrthodoxCanonicalForm
 
 SRCS	:=	main.cpp \
 			Fixed.cpp
 
-HEADERS	:=	Colors.hpp \
-			Fixed.hpp
+HEADERS	:=	Fixed.hpp
 			
 OBJS	:=	$(SRCS:.cpp=.o)
 

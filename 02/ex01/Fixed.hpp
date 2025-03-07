@@ -6,16 +6,24 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:50:19 by ygaiffie          #+#    #+#             */
-/*   Updated: 2025/02/26 12:19:26 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/07 02:34:03 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 #define FIXED_HPP
 
+#define HBLU "\033[1;34m"
+#define HMAG "\033[1;35m"
+#define HGRN "\033[1;32m"
+#define RED "\033[1;31m"
+#define HYEL "\033[1;33m"
+#define MAG "\033[0;35m"
+#define RESET "\033[0m"
+
+
 #include <cmath>
 #include <iostream>
-#include "Colors.hpp"
 
 class Fixed
 {
@@ -33,8 +41,8 @@ class Fixed
 		float	toFloat() const ;
 		
 	private:
-		int fixed_point;
-		static const int fractional_bit = 8;
+		int					_fixed_point;
+		static const int	_fractional_bit = 8;
 
 };
 
