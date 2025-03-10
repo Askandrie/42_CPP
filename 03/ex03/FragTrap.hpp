@@ -1,43 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 16:41:55 by aska              #+#    #+#             */
-/*   Updated: 2025/03/10 23:50:57 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/08 04:24:20 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#ifndef FragTrap_HPP
+#define FragTrap_HPP
 
 #include <iostream>
 #include <string>
 #include "Colors.hpp"
 #include "ClapTrap.hpp"
 
-#define DEFAULT_SCAVTRAP_HIT_POINTS 100
-#define DEFAULT_SCAVTRAP_ENERGY_POINTS 50
-#define DEFAULT_SCAVTRAP_ATTACK_DAMAGE 20
-#define DEFAULT_SCAVTRAP_NAME "ScavTrap"
+#define DEFAULT_FRAGTRAP_HIT_POINTS 100
+#define DEFAULT_FRAGTRAP_ENERGY_POINTS 50
+#define DEFAULT_FRAGTRAP_ATTACK_DAMAGE 20
 
-class ScavTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
-    private:
-        bool gateState;
 /* -------------------------- OrthodoxCanonicalForm ------------------------- */
     public:
-        ScavTrap(std::string name = DEFAULT_SCAVTRAP_NAME);
-        ScavTrap(const ScavTrap &origin);
-        ~ScavTrap();
-        ScavTrap &operator=(const ScavTrap &origin);
+        FragTrap();
+        FragTrap(std::string name);
+        FragTrap(const FragTrap &origin);
+        ~FragTrap();
+        FragTrap &operator=(const FragTrap &origin);
 
 /* -------------------------------- Functions ------------------------------- */
-        void attack(const std::string &target);
-        void guardGate();
-        void displayStats();
+        void highFiveGuys();
 };
 
 #endif

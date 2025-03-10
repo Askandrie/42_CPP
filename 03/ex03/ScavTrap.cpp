@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 19:13:23 by aska              #+#    #+#             */
-/*   Updated: 2025/03/11 00:01:47 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/01 00:41:21 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,15 @@
 /* -------------------------------------------------------------------------- */
 /*                            OrthodoxCanonicalForm                           */
 /* -------------------------------------------------------------------------- */
+
+ScavTrap::ScavTrap() : ClapTrap()
+{
+    this->hitPoints = DEFAULT_SCAVTRAP_HIT_POINTS;
+    this->energyPoints = DEFAULT_SCAVTRAP_ENERGY_POINTS;
+    this->attackDamage = DEFAULT_SCAVTRAP_ATTACK_DAMAGE;
+    this->gateState = false;
+    std::cout << "ScavTrap\t" << HMAG << name << RESET << "\tconstructed" << std::endl;
+}
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
@@ -56,8 +65,6 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &origin)
 
 void ScavTrap::guardGate()
 {
-    if (ClapTrap::isAlive() == false)
-        return;
     if (gateState)
         std::cout << "ScavTrap " << HMAG << name << RESET << " is already in Gate keeper mode" << std::endl;
     else
@@ -79,9 +86,14 @@ void ScavTrap::displayStats()
 
 void ScavTrap::attack(const std::string& target)
 {
-    if (ClapTrap::isAlive() && ClapTrap::haveEnergy())
+    if (hitPoints == 0 || energyPoints == 0)
     {
-        --energyPoints;
-        std::cout << "ScavTrap " << HMAG << name << RESET << " uses a super ScavTrap attack on " << target << " which results in " << attackDamage << " damage points!\n";    --energyPoints;
+        if (hitPoints == 0)
+            std::cout << "ScavTrap " << HMAG << name << RESET << " can't attack because it's out of hit points" << std::endl;
+        if (energyPoints == 0)
+            std::cout << "ScavTrap " << HMAG << name << RESET << " can't attack because it's out of energy points" << std::endl;
+        return ;
     }
+    std::cout << "ScavTrap " << HMAG << name << RESET << " attacks " << MAG << target << RESET <<", causing " << YEL << attackDamage << RESET << " points of damage!" << std::endl;
+    --energyPoints;
 }
