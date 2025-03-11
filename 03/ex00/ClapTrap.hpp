@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 16:19:47 by aska              #+#    #+#             */
-/*   Updated: 2025/03/10 19:57:37 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/11 12:39:43 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,21 @@
 
 #include <iostream>
 #include <string>
-#include "Colors.hpp"
+
+#define RESET "\033[0m"
+#define RED "\033[31m"
+#define MAG "\033[35m"
+#define YEL "\033[33m"
+#define GRN "\033[32m"
+#define HMAG "\033[0;95m"
+#define HBLU "\033[0;94m"
+#define BHGRN "\033[1;92m"
 
 #define DEFAULT_HIT_POINTS 10
 #define DEFAULT_ENERGY_POINTS 10
 #define DEFAULT_ATTACK_DAMAGE 0
 #define DEFAULT_NAME "ClapTrap"
+
 
 class	ClapTrap
 {

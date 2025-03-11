@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 16:41:55 by aska              #+#    #+#             */
-/*   Updated: 2025/03/11 00:14:10 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/11 12:46:31 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <iostream>
 #include <string>
-#include "Colors.hpp"
 #include "ClapTrap.hpp"
 
 #define DEFAULT_FRAGTRAP_HIT_POINTS 100

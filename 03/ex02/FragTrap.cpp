@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 19:13:23 by aska              #+#    #+#             */
-/*   Updated: 2025/03/11 00:14:50 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/11 12:44:26 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,18 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
     this->hitPoints = DEFAULT_FRAGTRAP_HIT_POINTS;
     this->energyPoints = DEFAULT_FRAGTRAP_ENERGY_POINTS;
     this->attackDamage = DEFAULT_FRAGTRAP_ATTACK_DAMAGE;
-    std::cout << "FragTrap\t" << HMAG << this->name << RESET << "\tconstructed" << std::endl;
+    std::cout << "FragTrap " << HMAG << this->name << RESET << " constructed" << std::endl;
 }
 
 FragTrap::FragTrap(FragTrap const &origin) : ClapTrap(origin.name)
 {
     *this = origin;
-    std::cout << "FragTrap\t" << HMAG << name << RESET << "\tcopied" << std::endl;
+    std::cout << "FragTrap " << HMAG << name << RESET << " copied" << std::endl;
 }
 
 FragTrap::~FragTrap()
 {
-    std::cout << "FragTrap\t" << HMAG << name << RESET << "\tdestroyed" << std::endl;
+    std::cout << "FragTrap " << HMAG << name << RESET << " destroyed" << std::endl;
 }
 
 FragTrap &FragTrap::operator=(FragTrap const &origin)
@@ -54,5 +54,5 @@ FragTrap &FragTrap::operator=(FragTrap const &origin)
 void	FragTrap::highFiveGuys(void)
 {
     if (ClapTrap::isAlive())
-	    std::cout << "FragTrap " << name << ": You want a high five?\n\t*WHAMM*\nHere you go." << std::endl;
+	    std::cout << "FragTrap " << name << ": You want a high five?\n\t" BWHT "*WHAMM* !! Here you go!" RESET << std::endl;
 }

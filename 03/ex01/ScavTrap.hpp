@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 16:41:55 by aska              #+#    #+#             */
-/*   Updated: 2025/03/10 23:50:57 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/11 12:42:03 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include <iostream>
 #include <string>
-#include "Colors.hpp"
 #include "ClapTrap.hpp"
 
 #define DEFAULT_SCAVTRAP_HIT_POINTS 100

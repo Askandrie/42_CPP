@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 16:23:29 by aska              #+#    #+#             */
-/*   Updated: 2025/03/10 23:49:26 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/11 12:18:52 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@
 /*                            OrthodoxCanonicalForm                           */
 /* -------------------------------------------------------------------------- */
 
-ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(DEFAULT_CLAPTRAP_HIT_POINTS), energyPoints(DEFAULT_CLAPTRAP_ENERGY_POINTS), attackDamage(DEFAULT_CLAPTRAP_ATTACK_DAMAGE)
+ClapTrap::ClapTrap(std::string name)	:	name(name),
+											hitPoints(DEFAULT_CLAPTRAP_HIT_POINTS),
+											energyPoints(DEFAULT_CLAPTRAP_ENERGY_POINTS),
+											attackDamage(DEFAULT_CLAPTRAP_ATTACK_DAMAGE)
 {
     std::cout << "ClapTrap\t" << HMAG << this->name << RESET << "\tconstructed" << std::endl;
 }

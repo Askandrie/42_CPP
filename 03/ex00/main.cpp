@@ -3,20 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:21:44 by aska              #+#    #+#             */
-/*   Updated: 2025/03/01 02:41:03 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/11 12:38:21 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-
-
 int main()
 {
-    std::cout << BHGRN << "\t\t### TESTING CLAPTRAP ###\n" << RESET << std::endl;
+    std::cout << BHGRN "\t\t### TESTING CLAPTRAP ###\n" RESET << std::endl;
     {
         ClapTrap ct_a;
         ClapTrap ct_b("Hachi");

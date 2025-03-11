@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 16:23:29 by aska              #+#    #+#             */
-/*   Updated: 2025/03/10 23:49:26 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/11 12:43:15 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@
 
 ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(DEFAULT_CLAPTRAP_HIT_POINTS), energyPoints(DEFAULT_CLAPTRAP_ENERGY_POINTS), attackDamage(DEFAULT_CLAPTRAP_ATTACK_DAMAGE)
 {
-    std::cout << "ClapTrap\t" << HMAG << this->name << RESET << "\tconstructed" << std::endl;
+    std::cout << "ClapTrap " << HMAG << this->name << RESET << " constructed" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &origin)
 {
     *this = origin;
-    std::cout << "ClapTrap\t" << HMAG << this->name << RESET << "\tcopied" << std::endl;
+    std::cout << "ClapTrap " << HMAG << this->name << RESET << " copied" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "ClapTrap\t" << HMAG << this->name << RESET << "\tdestroyed" << std::endl;
+    std::cout << "ClapTrap " << HMAG << this->name << RESET << " destroyed" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(ClapTrap const &origin)
@@ -52,7 +52,7 @@ bool ClapTrap::isAlive() const
 {
     if (this->hitPoints == 0)
     {
-        std::cout << "ClapTrap " << HMAG << this->name << RESET << "\tis already down !" << std::endl;
+        std::cout << "ClapTrap " << HMAG << this->name << RESET << " is already down !" << std::endl;
         return false;
     }
     return true;
@@ -62,7 +62,7 @@ bool ClapTrap::haveEnergy() const
 {
     if (this->energyPoints == 0)
     {
-        std::cout << "ClapTrap " << HMAG << this->name << RESET << "\tis out of energy points !" << std::endl;
+        std::cout << "ClapTrap " << HMAG << this->name << RESET << " is out of energy points !" << std::endl;
         return false;
     }
     return true;
@@ -98,9 +98,9 @@ void ClapTrap::beRepaired(unsigned int amount)
 void ClapTrap::displayStats()
 {
     std::cout << MAG << name << RESET << std::endl;
-    std::cout << "|---" << HBLU << "HP:\t" << GRN << hitPoints << RESET << std::endl;
-    std::cout << "|---" << HBLU << "EP:\t" << GRN << energyPoints << RESET << std::endl;
-    std::cout << "|---" << HBLU << "AD:\t" << GRN << attackDamage << RESET << std::endl;
+    std::cout << "|---" << HBLU << "HP: " << GRN << hitPoints << RESET << std::endl;
+    std::cout << "|---" << HBLU << "EP: " << GRN << energyPoints << RESET << std::endl;
+    std::cout << "|---" << HBLU << "AD: " << GRN << attackDamage << RESET << std::endl;
     std::cout << std::endl;
 }
 
@@ -134,6 +134,6 @@ unsigned int ClapTrap::getAttackDamage() const
 
 void ClapTrap::setAttackDamage(unsigned int newAttackDamage)
 {
-    std::cout << "ClapTrap " << HMAG << name << RESET << "\tset AttackDamage to " << YEL << newAttackDamage << RESET <<std::endl;
+    std::cout << "ClapTrap " << HMAG << name << RESET << " set AttackDamage to " << YEL << newAttackDamage << RESET <<std::endl;
     attackDamage = newAttackDamage;
 }

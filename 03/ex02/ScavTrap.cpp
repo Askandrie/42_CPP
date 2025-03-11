@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 19:13:23 by aska              #+#    #+#             */
-/*   Updated: 2025/03/11 00:01:47 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/11 12:47:48 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,19 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
     this->energyPoints = DEFAULT_SCAVTRAP_ENERGY_POINTS;
     this->attackDamage = DEFAULT_SCAVTRAP_ATTACK_DAMAGE;
     this->gateState = false;
-    std::cout << "ScavTrap\t" << HMAG << this->name << RESET << "\tconstructed with parameter" << std::endl;
+    std::cout << "ScavTrap " << HMAG << this->name << RESET << " constructed with parameter" << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap const &origin) : ClapTrap(origin.name)
 {
     *this = origin;
     this->gateState = origin.gateState;
-    std::cout << "ScavTrap\t" << HMAG << name << RESET << "\tcopied" << std::endl;
+    std::cout << "ScavTrap " << HMAG << name << RESET << " copied" << std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << "ScavTrap\t" << HMAG << name << RESET << "\tdestroyed" << std::endl;
+    std::cout << "ScavTrap " << HMAG << name << RESET << " destroyed" << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(ScavTrap const &origin)
@@ -70,10 +70,10 @@ void ScavTrap::guardGate()
 void ScavTrap::displayStats()
 {
     std::cout << MAG << name << RESET << std::endl;
-    std::cout << "|---" << HBLU << "HP:\t" << HGRN << hitPoints << RESET << std::endl;
-    std::cout << "|---" << HBLU << "EP:\t" << HGRN << energyPoints << RESET << std::endl;
-    std::cout << "|---" << HBLU << "AD:\t" << HGRN << attackDamage << RESET << std::endl;
-    std::cout << "|---" << HBLU << "GS:\t" << HGRN << (gateState ? "ON" : "OFF") << RESET << std::endl;
+    std::cout << "|---" << HBLU << "HP: " << GRN << hitPoints << RESET << std::endl;
+    std::cout << "|---" << HBLU << "EP: " << GRN << energyPoints << RESET << std::endl;
+    std::cout << "|---" << HBLU << "AD: " << GRN << attackDamage << RESET << std::endl;
+    std::cout << "|---" << HBLU << "GS: " << GRN << (gateState ? "ON" : "OFF") << RESET << std::endl;
     std::cout << std::endl;
 }
 
