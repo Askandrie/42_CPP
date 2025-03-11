@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:21:44 by aska              #+#    #+#             */
-/*   Updated: 2025/03/01 03:10:23 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/11 17:56:38 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,12 +65,12 @@ int main()
 		FragTrap e;
 		FragTrap f("FD");
 
-		e.highFiveGuys();
+		e.highFivesGuys();
 		e.attack("Supra");
 		e.takeDamage(101);
 		e.takeDamage(1);
 		e.attack("Impreza");
-		f.highFiveGuys();
+		f.highFivesGuys();
 		// for(int i = 0; i < 101; i++)
 		// 	f.attack("Impreza");
 	}

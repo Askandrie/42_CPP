@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 04:25:25 by aska              #+#    #+#             */
-/*   Updated: 2025/03/11 00:22:38 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/11 17:54:07 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ class DiamondTrap : public ScavTrap, public FragTrap
         std::string _name;
 
     public:
+        using FragTrap::hitPoints;
+        using FragTrap::attackDamage;
+        using ScavTrap::energyPoints;
+        using ScavTrap::attack;
+
         DiamondTrap(std::string name = DEFAULT_DIAMONDTRAP_NAME);
         DiamondTrap(const DiamondTrap &origin);
         ~DiamondTrap();

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 16:41:55 by aska              #+#    #+#             */
-/*   Updated: 2025/03/11 12:46:31 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/03/11 18:00:41 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 #include "ClapTrap.hpp"
 
 #define DEFAULT_FRAGTRAP_HIT_POINTS 100
-#define DEFAULT_FRAGTRAP_ENERGY_POINTS 50
-#define DEFAULT_FRAGTRAP_ATTACK_DAMAGE 20
+#define DEFAULT_FRAGTRAP_ENERGY_POINTS 100
+#define DEFAULT_FRAGTRAP_ATTACK_DAMAGE 30
 #define DEFAULT_FRAGTRAP_NAME "FragTrap"
 
 class FragTrap : public ClapTrap
@@ -32,7 +32,7 @@ class FragTrap : public ClapTrap
         FragTrap &operator=(const FragTrap &origin);
 
 /* -------------------------------- Functions ------------------------------- */
-        void highFiveGuys();
+        void highFivesGuys();
 };
 
 #endif
