@@ -6,7 +6,7 @@
 #    By: aska <aska@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:53:10 by aska              #+#    #+#              #
-#    Updated: 2025/03/04 02:52:45 by aska             ###   ########.fr        #
+#    Updated: 2025/03/11 21:20:09 by aska             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,8 @@ NC		:=	\033[0m
 NAME	:=	Interface_&_recap
 
 CXX		:=	c++
-CXXFLAGS  :=  -Wall -Werror -Wextra -g -std=c++98
 CPPFLAGS  :=  -I. -MMD -MP
+CXXFLAGS  :=  -Wall -Werror -Wextra -g -std=c++98
 
 SRCS	:=	main.cpp \
 			Animal.cpp \
