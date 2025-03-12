@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 01:52:26 by aska              #+#    #+#             */
-/*   Updated: 2025/03/06 01:07:04 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/12 01:52:30 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ class Cure : public AMateria
     public:
         Cure();
         Cure(Cure const & ori);
-        Cure &operator=(Cure const & ori);
         ~Cure();
+
+        Cure &operator=(Cure const & ori);
+        
         AMateria* clone() const;
         void use(ICharacter& target);
 }

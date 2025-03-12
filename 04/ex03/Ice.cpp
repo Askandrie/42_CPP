@@ -16,7 +16,7 @@ Ice::Ice() : AMateria("ice")
 {
     std::cout << MAG << "Ice" << RESET << "\tdefault constructor called" << std::endl;
 }
-Ice::Ice(Ice const & ori) : AMateria(ori)
+Ice::Ice(Ice const & ori) : AMateria(ori.getType())
 {
     std::cout << MAG << "Ice" << RESET << "\tcopy constructor called" << std::endl;
 }

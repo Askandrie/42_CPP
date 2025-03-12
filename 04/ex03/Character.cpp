@@ -6,11 +6,12 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 03:04:54 by aska              #+#    #+#             */
-/*   Updated: 2025/03/06 03:16:54 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/12 02:39:24 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
+
 Character::Character(std::string name) : _name(name)
 {
     std::cout << MAG << "Character" << RESET << "\tdefault constructor called" << std::endl;
@@ -18,17 +19,24 @@ Character::Character(std::string name) : _name(name)
         this->_materia[i] = NULL;
 }
 
-Character::Character(Character const & ori)
+Character::Character(Character const & ori) : _name(ori.getName() + "_copy")
 {
     std::cout << MAG << "Character" << RESET << "\tcopy constructor called" << std::endl;
+    for(int i = 0; i < 4; i++)
+	{
+		if ((ori._materia)[i])
+			(this->_materia)[i] = (ori._materia[i])->clone();
+	}
     *this = ori;
 }
+
 Character::~Character()
 {
     std::cout << MAG << "Character" << RED << "\tdestructor called" << RESET << std::endl;
     for (int i = 0; i < MAX_MATERIA; i++)
         delete this->_materia[i];
 }
+
 Character &Character::operator=(Character const & ori)
 {
     if (this != &ori)
@@ -36,15 +44,18 @@ Character &Character::operator=(Character const & ori)
         this->_name = ori._name;
         for (int i = 0; i < MAX_MATERIA; i++)
         {
-            delete this->_materia[i];
-            if (ori._materia[i])
+            if (ori._materia[i] != NULL)
+            {
+                delete this->_materia[i];
                 this->_materia[i] = ori._materia[i]->clone();
+            }
             else
                 this->_materia[i] = NULL;
         }
     }
     return *this;
 }
+
 const std::string &Character::getName() const
 {
     return this->_name;
@@ -72,7 +83,6 @@ void Character::unequip(int idx)
         return ;
     }
     std::cout << BGRN << "Character" << RESET << " " << YEL << this->_name << RESET << " unequipped " << BOLD << this->_materia[idx]->getType() << RESET << std::endl;
-    delete this->_materia[idx];
     this->_materia[idx] = NULL;
 }
 
