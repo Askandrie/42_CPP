@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 02:19:12 by aska              #+#    #+#             */
-/*   Updated: 2025/03/12 02:54:57 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/13 17:05:35 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,33 @@
 
 Cure::Cure() : AMateria("cure")
 {
-    std::cout << MAG << "Cure" << RESET << "\tdefault constructor called" << std::endl;
+    std::cout << BR1G5B2 << "Cure" << RESET << "\tconstructor" << std::endl;
 }
 
 Cure::Cure(Cure const & ori) : AMateria(ori.getType())
 {
-    std::cout << MAG << "Cure" << RESET << "\tcopy constructor called" << std::endl;
+    std::cout << BR1G5B2 << "Cure" << RESET << "\tcopy constructor" << std::endl;
 }
 
 Cure::~Cure()
 {
-    std::cout << MAG << "Cure" << RED << "\tdestructor called" << RESET << std::endl;
+    std::cout << BR1G5B2 << "Cure" << RED << "\tdestructor" << RESET << std::endl;
 }
 
 Cure &Cure::operator=(Cure const & ori)
 {
-    if (this != &ori)
-    return *this;
+	if (this != &ori)
+		this->_type = ori._type;
+	return *this;
 }
 
 AMateria* Cure::clone() const
 {
-    Cure newCure = Cure(*this);
-    return  &newCure;
+	std::cout << BR1G5B2 << "Cure" << RESET << "\thas cloned" << std::endl;
+	return new Cure(*this);
 }
 
 void Cure::use(ICharacter& target)
 {
-    std::cout << HGRN << "* heals " << YEL << target.getName() << HGRN << "'s wounds *" << RESET << std::endl;
+    std::cout << HGRE << "* heals " << BYEL << target.getName() << HGRE << "'s wounds *" << RESET << std::endl;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 16:23:29 by aska              #+#    #+#             */
-/*   Updated: 2025/02/28 23:42:15 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/13 14:41:35 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,15 +98,15 @@ void ClapTrap::beRepaired(unsigned int amount)
     hitPoints += amount;
     if (hitPoints > DEFAULT_CLAPTRAP_HIT_POINTS)
         hitPoints = DEFAULT_CLAPTRAP_HIT_POINTS;
-    std::cout << "ClapTrap " << HMAG << name << RESET << " repairs itself, regaining " << HGRN << amount << RESET << " hit points!" << std::endl;
+    std::cout << "ClapTrap " << HMAG << name << RESET << " repairs itself, regaining " << HGRE << amount << RESET << " hit points!" << std::endl;
 }
 
 void ClapTrap::displayStats()
 {
     std::cout << MAG << name << RESET << std::endl;
-    std::cout << "|---" << HBLU << "HP:\t" << HGRN << hitPoints << RESET << std::endl;
-    std::cout << "|---" << HBLU << "EP:\t" << HGRN << energyPoints << RESET << std::endl;
-    std::cout << "|---" << HBLU << "AD:\t" << HGRN << attackDamage << RESET << std::endl;
+    std::cout << "|---" << HBLU << "HP:\t" << HGRE << hitPoints << RESET << std::endl;
+    std::cout << "|---" << HBLU << "EP:\t" << HGRE << energyPoints << RESET << std::endl;
+    std::cout << "|---" << HBLU << "AD:\t" << HGRE << attackDamage << RESET << std::endl;
     std::cout << std::endl;
 }
 

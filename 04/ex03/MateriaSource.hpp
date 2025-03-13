@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/13 13:56:22 by ygaiffie          #+#    #+#             */
-/*   Updated: 2025/03/13 14:41:35 by ygaiffie         ###   ########.fr       */
+/*   Created: 2025/03/13 13:28:14 by ygaiffie          #+#    #+#             */
+/*   Updated: 2025/03/13 16:12:25 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
-
+#pragma once
+#include "IMateriaSource.hpp"
+#include "AMateria.hpp"
 #include <iostream>
 #include <string>
 
-const std::string HRED = "\033[0;91m";
-const std::string HGRE = "\033[0;92m";
-const std::string HYEL = "\033[0;93m";
-const std::string RESET = "\033[0m";
-
-
-class Zombie
+class MateriaSource : virtual public IMateriaSource
 {
 	public:
-		Zombie();
-		Zombie(std::string name);
-		~Zombie();
-		void announce(void);
+		MateriaSource();
+		MateriaSource(MateriaSource const & ori);
+		~MateriaSource();
+
+		MateriaSource &operator=(MateriaSource const & ori);
+
+		void learnMateria(AMateria* materia);
+		AMateria* createMateria(std::string const & type);
 
 	private:
-		std::string name;
+		AMateria *_model[4];
 };
-
-Zombie* newZombie(std::string name);
-void randomChump(std::string name);
-#endif

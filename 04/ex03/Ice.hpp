@@ -13,7 +13,7 @@
 #pragma once
 #include "AMateria.hpp"
 #include "ICharacter.hpp"
-#include "Colors.hpp"
+#include "../../Colors.hpp"
 #include <iostream>
 #include <string>
 
@@ -26,4 +26,4 @@ class Ice : public AMateria
         ~Ice();
         AMateria* clone() const;
         void use(ICharacter& target);
-}
+};

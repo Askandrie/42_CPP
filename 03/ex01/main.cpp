@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:21:44 by aska              #+#    #+#             */
-/*   Updated: 2025/03/01 02:58:19 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/13 14:41:35 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-    std::cout << BHGRN << "\t\t### TESTING CLAPTRAP ###\n" << RESET << std::endl;
+    std::cout << BHGRE << "\t\t### TESTING CLAPTRAP ###\n" << RESET << std::endl;
     {
         ClapTrap ct_a;
         ClapTrap ct_b("Hachi");
@@ -36,7 +36,7 @@ int main()
         ct_b.beRepaired(4);
         ct_b.displayStats();
     }
-    std::cout << BHGRN << "\t\t### TESTING SCAVTRAP ###\n" << RESET << std::endl;
+    std::cout << BHGRE << "\t\t### TESTING SCAVTRAP ###\n" << RESET << std::endl;
 	{
 		ScavTrap st_a;
 		ScavTrap st_b("Roku");

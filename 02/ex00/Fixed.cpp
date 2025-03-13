@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:48:21 by ygaiffie          #+#    #+#             */
-/*   Updated: 2025/03/07 02:21:45 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/13 14:41:35 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 Fixed::Fixed() : _fixed_point(0)
 {
-	std::cout << HGRN "Default Constructor Called" RESET << std::endl;
+	std::cout << HGRE "Default Constructor Called" RESET << std::endl;
 }
 
 Fixed::Fixed(const Fixed &origin) : _fixed_point(origin._fixed_point)

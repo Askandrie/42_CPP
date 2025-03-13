@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:50:19 by ygaiffie          #+#    #+#             */
-/*   Updated: 2025/03/07 02:55:28 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/13 14:41:35 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #define HBLU "\033[1;34m"
 #define HMAG "\033[1;35m"
-#define HGRN "\033[1;32m"
+#define HGRE "\033[1;32m"
 #define RED "\033[1;31m"
 #define HYEL "\033[1;33m"
 #define MAG "\033[0;35m"

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 17:48:21 by ygaiffie          #+#    #+#             */
-/*   Updated: 2025/03/07 02:33:15 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/13 14:41:35 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 Fixed::Fixed() : _fixed_point(0)
 {
-	std::cout << HGRN << "Default Constructor Called" << RESET << std::endl;
+	std::cout << HGRE << "Default Constructor Called" << RESET << std::endl;
 }
 
 Fixed::Fixed(int i)
 {
-	std::cout << HGRN << "Int Constructor Called" << RESET << std::endl;
+	std::cout << HGRE << "Int Constructor Called" << RESET << std::endl;
 	this->_fixed_point = i << this->_fractional_bit;
 }
 
 Fixed::Fixed(float f)
 {
-	std::cout << HGRN << "Float Constructor Called" << RESET << std::endl;
+	std::cout << HGRE << "Float Constructor Called" << RESET << std::endl;
 	this->_fixed_point = (int)roundf(f * (1 << this->_fractional_bit));
 }
 

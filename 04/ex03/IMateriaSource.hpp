@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 03:29:58 by aska              #+#    #+#             */
-/*   Updated: 2025/03/06 04:14:54 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/13 13:04:22 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "AMateria.hpp"
-#include "Colors.hpp"
+#include "../../Colors.hpp"
 #include <iostream>
 #include <string>
 

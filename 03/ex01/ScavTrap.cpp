@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 19:13:23 by aska              #+#    #+#             */
-/*   Updated: 2025/03/11 00:01:47 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/13 14:41:35 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,10 +70,10 @@ void ScavTrap::guardGate()
 void ScavTrap::displayStats()
 {
     std::cout << MAG << name << RESET << std::endl;
-    std::cout << "|---" << HBLU << "HP:\t" << HGRN << hitPoints << RESET << std::endl;
-    std::cout << "|---" << HBLU << "EP:\t" << HGRN << energyPoints << RESET << std::endl;
-    std::cout << "|---" << HBLU << "AD:\t" << HGRN << attackDamage << RESET << std::endl;
-    std::cout << "|---" << HBLU << "GS:\t" << HGRN << (gateState ? "ON" : "OFF") << RESET << std::endl;
+    std::cout << "|---" << HBLU << "HP:\t" << HGRE << hitPoints << RESET << std::endl;
+    std::cout << "|---" << HBLU << "EP:\t" << HGRE << energyPoints << RESET << std::endl;
+    std::cout << "|---" << HBLU << "AD:\t" << HGRE << attackDamage << RESET << std::endl;
+    std::cout << "|---" << HBLU << "GS:\t" << HGRE << (gateState ? "ON" : "OFF") << RESET << std::endl;
     std::cout << std::endl;
 }
 

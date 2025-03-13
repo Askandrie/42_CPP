@@ -6,7 +6,7 @@
 /*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 16:19:47 by aska              #+#    #+#             */
-/*   Updated: 2025/03/11 12:39:43 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/03/13 14:41:35 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 #define GRN "\033[32m"
 #define HMAG "\033[0;95m"
 #define HBLU "\033[0;94m"
-#define BHGRN "\033[1;92m"
+#define BHGRE "\033[1;92m"
 
 #define DEFAULT_HIT_POINTS 10
 #define DEFAULT_ENERGY_POINTS 10

@@ -6,7 +6,7 @@
 /*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 13:56:22 by ygaiffie          #+#    #+#             */
-/*   Updated: 2024/11/13 17:03:21 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/03/13 14:45:50 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 #include <string>
 
 const std::string HRED = "\033[0;91m";
-const std::string HGRN = "\033[0;92m";
+const std::string HGRE = "\033[0;92m";
 const std::string HYEL = "\033[0;93m";
 const std::string HBLU = "\033[0;94m";
-const std::string HCYN = "\033[0;95m";
+const std::string HCYA = "\033[0;95m";
 const std::string RESET = "\033[0m";
 
 

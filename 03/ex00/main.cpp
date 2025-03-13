@@ -6,7 +6,7 @@
 /*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 15:21:44 by aska              #+#    #+#             */
-/*   Updated: 2025/03/11 12:38:21 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/03/13 14:41:35 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-    std::cout << BHGRN "\t\t### TESTING CLAPTRAP ###\n" RESET << std::endl;
+    std::cout << BHGRE "\t\t### TESTING CLAPTRAP ###\n" RESET << std::endl;
     {
         ClapTrap ct_a;
         ClapTrap ct_b("Hachi");

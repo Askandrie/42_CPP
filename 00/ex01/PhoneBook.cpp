@@ -6,7 +6,7 @@
 /*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:02:22 by ygaiffie          #+#    #+#             */
-/*   Updated: 2025/02/27 11:32:57 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/03/13 14:41:35 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void PhoneBook::AddContact()
 	 	ContactCount = MAX_CONTACTS;
 	if (++ContactIndex == MAX_CONTACTS)
 		ContactIndex = 0;
-	std::cout << HGRN << "Contact added successfully.\n" << RESET << std::endl;
+	std::cout << HGRE << "Contact added successfully.\n" << RESET << std::endl;
 }
 
 

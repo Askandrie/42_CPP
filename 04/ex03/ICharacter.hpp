@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 02:04:35 by aska              #+#    #+#             */
-/*   Updated: 2025/03/06 02:06:13 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/13 14:02:04 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <string>
 #include <iostream>
-#include "Colors.hpp"
+#include "../../Colors.hpp"
 #include "AMateria.hpp"
 
 class	AMateria;

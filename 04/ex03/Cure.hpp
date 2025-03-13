@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 01:52:26 by aska              #+#    #+#             */
-/*   Updated: 2025/03/12 01:52:30 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/13 14:02:33 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "AMateria.hpp"
 #include "ICharacter.hpp"
-#include "Colors.hpp"
+#include "../../Colors.hpp"
 #include <iostream>
 #include <string>
 
@@ -28,4 +28,4 @@ class Cure : public AMateria
         
         AMateria* clone() const;
         void use(ICharacter& target);
-}
+};
