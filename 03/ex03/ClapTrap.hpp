@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 16:19:47 by aska              #+#    #+#             */
-/*   Updated: 2025/02/28 23:41:34 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/14 14:49:12 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <iostream>
 #include <string>
-#include "Colors.hpp"
+#include "../../Colors.hpp"
 
 #define DEFAULT_CLAPTRAP_HIT_POINTS 10
 #define DEFAULT_CLAPTRAP_ENERGY_POINTS 10

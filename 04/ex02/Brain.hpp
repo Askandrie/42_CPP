@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 17:46:35 by aska              #+#    #+#             */
-/*   Updated: 2025/03/03 17:34:58 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/14 14:49:12 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include "Colors.hpp"
+#include "../../Colors.hpp"
 
 #include <iostream>
 #include <string>

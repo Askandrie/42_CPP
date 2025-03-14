@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 15:40:14 by aska              #+#    #+#             */
-/*   Updated: 2025/03/04 02:12:48 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/14 14:14:24 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Dog::Dog()
     std::cout << HBLU << this->type << RESET << "\tdefault constructor called" << std::endl;
 }
 
-Dog::Dog(const Dog &src) : Animal()
+Dog::Dog(const Dog &src) : AAnimal()
 {
     this->type = src.type;
     this->brain = new Brain();

@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 15:34:25 by aska              #+#    #+#             */
-/*   Updated: 2025/03/04 02:12:46 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/14 14:49:12 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 #define DOG_HPP
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
-#include "Colors.hpp"
+#include "../../Colors.hpp"
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
     private:
         Brain *brain;

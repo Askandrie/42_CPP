@@ -6,12 +6,12 @@
 /*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:02:11 by ygaiffie          #+#    #+#             */
-/*   Updated: 2025/02/27 11:25:21 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/03/14 14:49:12 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-#include "Colors.hpp"
+#include "../../Colors.hpp"
 
 Contact::Contact():	
 			Index(0),

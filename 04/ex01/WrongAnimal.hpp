@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/02 17:46:35 by aska              #+#    #+#             */
-/*   Updated: 2025/03/14 14:49:12 by ygaiffie         ###   ########.fr       */
+/*   Created: 2025/03/01 16:53:42 by aska              #+#    #+#             */
+/*   Updated: 2025/03/01 16:54:15 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include "../../Colors.hpp"
-
 #include <iostream>
 #include <string>
 
-#define MAX_IDEAS 100
-
-class Brain
+class WrongAnimal
 {
-    public:
-        Brain();
-        Brain(const Brain &src);
-        Brain &operator=(const Brain &ori);
-        ~Brain();
+    protected:
+        std::string type;
     
-        std::string ideas[MAX_IDEAS];
+    public:
+        WrongAnimal();
+        WrongAnimal(const WrongAnimal &src);
+        WrongAnimal &operator=(const WrongAnimal &ori);
+        virtual ~WrongAnimal();
+    
+        virtual void makeSound() const;
+        std::string getType() const;
 };

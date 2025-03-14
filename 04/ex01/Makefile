@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aska <aska@student.42.fr>                  +#+  +:+       +#+         #
+#    By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:53:10 by aska              #+#    #+#              #
-#    Updated: 2025/03/14 02:58:44 by aska             ###   ########.fr        #
+#    Updated: 2025/03/14 14:07:34 by ygaiffie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,19 +21,23 @@ CXX		:=	c++
 CPPFLAGS  :=  -I. -MMD -MP
 CXXFLAGS  :=  -Wall -Werror -Wextra -g -std=c++98
 
-NAME	:=	I_don’t_want_to_set_the_world_on_fire
+NAME	:=	I_don_t_want_to_set_the_world_on_fire
 
 SRCS	:=	main.cpp \
-			Animal.cpp \
+			AAnimal.cpp \
 			Cat.cpp \
 			Dog.cpp \
-			Brain.cpp
+			Brain.cpp \
+			WrongAnimal.cpp \
+			WrongCat.cpp
 
 HEADERS	:=	Colors.hpp \
-			Animal.hpp \
+			AAnimal.hpp \
 			Cat.hpp \
 			Dog.hpp \
-			Brain.hpp
+			Brain.hpp \
+			WrongAnimal.hpp \
+			WrongCat.hpp
 
 BUILD_DIR	:=	.build
 OBJS	:=	$(addprefix $(BUILD_DIR)/, $(SRCS:.cpp=.o))

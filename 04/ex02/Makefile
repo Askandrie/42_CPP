@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aska <aska@student.42.fr>                  +#+  +:+       +#+         #
+#    By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:53:10 by aska              #+#    #+#              #
-#    Updated: 2025/03/14 03:12:18 by aska             ###   ########.fr        #
+#    Updated: 2025/03/14 14:51:35 by ygaiffie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,22 +18,26 @@ BOLD	:=	\033[1m
 NC		:=	\033[0m
 
 CXX		:=	c++
-CXXFLAGS  :=  -Wall -Werror -Wextra -g -std=c++98
 CPPFLAGS  :=  -I. -MMD -MP
+CXXFLAGS  :=  -Wall -Werror -Wextra -g -std=c++98
 
 NAME	:=	Abstract_class
 
 SRCS	:=	main.cpp \
-			Animal.cpp \
+			AAnimal.cpp \
 			Cat.cpp \
 			Dog.cpp \
-			Brain.cpp
+			Brain.cpp \
+			WrongAnimal.cpp \
+			WrongCat.cpp
 
-HEADERS	:=	../../Colors.hpp \
-			Animal.hpp \
+HEADERS	:=	AAnimal.hpp \
 			Cat.hpp \
 			Dog.hpp \
-			Brain.hpp
+			Brain.hpp \
+			WrongAnimal.hpp \
+			WrongCat.hpp \
+			../../Colors.hpp
 
 BUILD_DIR	:=	.build
 OBJS	:=	$(addprefix $(BUILD_DIR)/, $(SRCS:.cpp=.o))
