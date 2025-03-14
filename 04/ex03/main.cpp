@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 13:58:52 by ygaiffie          #+#    #+#             */
-/*   Updated: 2025/03/14 03:38:14 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/14 12:44:32 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,11 @@ int main()
 	IMateriaSource *src = new MateriaSource();
 
 	std::cout << std::endl;
-	
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
 	std::cout << std::endl;
 
 	ICharacter *me = new Character("me");
-	std::cout << std::endl;
 
 	AMateria *temp;
 	std::cout << std::endl;

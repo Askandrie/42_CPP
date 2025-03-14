@@ -14,15 +14,15 @@
 
 Ice::Ice() : AMateria("ice")
 {
-    std::cout << BYEL << "Ice" << RESET << "\tconstructor" << std::endl;
+    std::cout << BYEL << "Ice\t" << RESET << "\tconstructor:\t" << (long)this << std::endl;
 }
 Ice::Ice(Ice const & ori) : AMateria(ori.getType())
 {
-    std::cout << BYEL << "Ice" << RESET << "\tcopy constructor" << std::endl;
+    std::cout << BYEL << "Ice\t" << RESET << "\tcopy const.:\t" << (long)this << std::endl;
 }
 Ice::~Ice()
 {
-    std::cout << BYEL << "Ice" << RED << "\tdestructor" << RESET << std::endl;
+    std::cout << BYEL << "Ice\t" << RED << "\tdestructor:\t" << RESET << (long)this << std::endl;
 }
 Ice &Ice::operator=(Ice const & ori)
 {
@@ -32,7 +32,7 @@ Ice &Ice::operator=(Ice const & ori)
 }
 AMateria* Ice::clone() const
 {
-	std::cout << BYEL << "Ice" << RESET << "\thas cloned" << std::endl;
+	std::cout << BR0G2B5 << "Ice" << BWHI << " has cloned" RESET << std::endl;
 	return new Ice(*this);
 }
 void Ice::use(ICharacter& target)

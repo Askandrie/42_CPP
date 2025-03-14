@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 01:33:55 by aska              #+#    #+#             */
-/*   Updated: 2025/03/14 03:28:45 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/14 12:43:28 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,19 @@
 AMateria::AMateria(std::string const &type) : _type(type)
 {
 	this->_isEquiped = false;
-	this->_ID = (long)this;
-	std::cout << BYEL "AMateria " RESET "constructor: " BWHI << this->_ID << RESET << std::endl;
+	std::cout << BYEL "AMateria\t" RESET "constructor:\t" << (long)this << RESET << std::endl;
 }
 
 AMateria::AMateria(AMateria const & ori)
 {
 	if (this != & ori)
 		*this = ori;
-	std::cout << BYEL "AMateria " RESET "copy constructor: " BWHI << this->_ID << RESET << std::endl;
+	std::cout << BYEL "AMateria\t" RESET "\tcopy const.:\t" << (long)this << RESET << std::endl;
 }
 
 AMateria::~AMateria()
 {
-	std::cout << BYEL "AMateria " HRED "destructor: " BWHI << this->_ID << RESET << std::endl;
+	std::cout << BYEL "AMateria\t" HRED "destructor:\t" RESET << (long)this << RESET << std::endl;
 }
 
 
@@ -39,7 +38,7 @@ std::string const & AMateria::getType() const
 
 void AMateria::use(ICharacter& target)
 {
-	std::cout << this->_type <<" used on " << target.getName() << std::endl;
+	std::cout << this->_type <<"\tused on\t" << target.getName() << std::endl;
 }
 
 AMateria & AMateria::operator=(AMateria const & ori)
@@ -47,7 +46,6 @@ AMateria & AMateria::operator=(AMateria const & ori)
 	if (this != &ori)
 	{
 		this->_type = ori.getType();
-		this->_ID = ori._ID;
 		this->_isEquiped = ori._isEquiped;
 	}
 	return *this;

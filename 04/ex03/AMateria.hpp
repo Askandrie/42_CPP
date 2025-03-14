@@ -6,7 +6,7 @@
 /*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 03:35:27 by aska              #+#    #+#             */
-/*   Updated: 2025/03/13 17:16:23 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/03/14 12:04:43 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class AMateria
 {
 	protected:
 		std::string		_type;
-		long			_ID;
 		bool			_isEquiped;
 
 	public:

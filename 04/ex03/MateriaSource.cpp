@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 13:45:54 by ygaiffie          #+#    #+#             */
-/*   Updated: 2025/03/14 03:30:22 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/14 12:41:54 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 MateriaSource::MateriaSource()
 {
-	std::cout << BYEL << "MateriaSource" << RESET << "\tconstructor" << std::endl;
+	std::cout << BYEL << "MateriaSource" << RESET << "\tconstructor:\t" << (long)this << std::endl;
 	for (int i = 0; i < 4; i++)
 		_model[i] = NULL;
 }
 
 MateriaSource::MateriaSource(MateriaSource const & ori)
 {
-	std::cout << BYEL << "MateriaSource" << RESET << "\tcopy constructor" << std::endl;
+	std::cout << BYEL << "MateriaSource" << RESET << "\tcopy const.:\t" << (long)this << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
 		if (ori._model[i])
@@ -33,7 +33,7 @@ MateriaSource::MateriaSource(MateriaSource const & ori)
 
 MateriaSource::~MateriaSource()
 {
-	std::cout << BYEL << "MateriaSource" << RED << "\tdestructor" << RESET << std::endl;
+	std::cout << BYEL << "MateriaSource" << RED << "\tdestructor:\t" << RESET << (long)this << std::endl;
 	for (int i = 0; i < 4; i++)
 		if (_model[i])
 			delete _model[i];
@@ -63,12 +63,12 @@ void MateriaSource::learnMateria(AMateria* materia)
 	{
 		if (_model[i] == NULL)
 		{
-			std::cout << MAG << "MateriaSource " << BWHI << materia->getType() << RESET << " learned" << std::endl;
+			std::cout << BR5G3B5 "MateriaSource " << materia->getType() << " learned" RESET << std::endl;
 			_model[i] = materia;
 			return;
 		}
 	}
-    std::cout << MAG << "MateriaSource" << BWHI << materia->getType() << RESET << " has no slot available" << std::endl;
+    std::cout << BR5G3B5 "MateriaSource " << materia->getType() << " has no slot available" RESET << std::endl;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)
@@ -78,6 +78,6 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 		if (_model[i] && _model[i]->getType() == type)
 			return _model[i]->clone();
 	}
-	std::cout << MAG << "MateriaSource" << BWHI << type << RESET << " has no " << type << " materia" << std::endl;
+	std::cout << BR5G3B5 "MateriaSource" << type << " has no " << type << " materia" RESET << std::endl;
 	return NULL;
 }

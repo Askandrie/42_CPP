@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 02:19:12 by aska              #+#    #+#             */
-/*   Updated: 2025/03/14 03:24:21 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/14 12:42:11 by ygaiffie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 Cure::Cure() : AMateria("cure")
 {
-    std::cout << BYEL << "Cure" << RESET << "\tconstructor" << std::endl;
+    std::cout << BYEL << "Cure\t" << RESET << "\tconstructor:\t" << (long)this << std::endl;
 }
 
 Cure::Cure(Cure const & ori) : AMateria(ori.getType())
 {
-    std::cout << BYEL << "Cure" << RESET << "\tcopy constructor" << std::endl;
+    std::cout << BYEL << "Cure\t" << RESET << "\tcopy const.:\t" << (long)this << std::endl;
 }
 
 Cure::~Cure()
 {
-    std::cout << BYEL << "Cure" << RED << "\tdestructor" << RESET << std::endl;
+    std::cout << BYEL << "Cure\t" << RED << "\tdestructor:\t" << RESET << (long)this << std::endl;
 }
 
 Cure &Cure::operator=(Cure const & ori)
@@ -36,7 +36,7 @@ Cure &Cure::operator=(Cure const & ori)
 
 AMateria* Cure::clone() const
 {
-	std::cout << BYEL << "Cure" << RESET << "\thas cloned" << std::endl;
+	std::cout << BR1G5B2 << "Cure" << RESET << " has cloned" << std::endl;
 	return new Cure(*this);
 }
 
