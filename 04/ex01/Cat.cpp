@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 16:03:01 by aska              #+#    #+#             */
-/*   Updated: 2025/03/04 00:07:19 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/14 03:09:01 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ Cat::~Cat()
 
 void Cat::makeSound() const
 {
-    std::cout << "Woof Woof" << std::endl;
+    std::cout << "Nya !" << std::endl;
 }
 
 void Cat::setIdea(std::string idea, unsigned int i)

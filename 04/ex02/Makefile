@@ -6,7 +6,7 @@
 #    By: aska <aska@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:53:10 by aska              #+#    #+#              #
-#    Updated: 2025/03/04 02:25:16 by aska             ###   ########.fr        #
+#    Updated: 2025/03/14 03:12:18 by aska             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SRCS	:=	main.cpp \
 			Dog.cpp \
 			Brain.cpp
 
-HEADERS	:=	Colors.hpp \
+HEADERS	:=	../../Colors.hpp \
 			Animal.hpp \
 			Cat.hpp \
 			Dog.hpp \
@@ -45,32 +45,32 @@ run: init show_flags $(NAME) finish
 
 $(NAME): $(OBJS)
 	@echo -n " Linking..."
-	@$(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OBJS) -o $(NAME) && echo -e "\t$(BGRN)Linking successful!$(NC)\n"
+	@$(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OBJS) -o $(NAME) && echo "\t$(BGRN)Linking successful!$(NC)\n"
 
 $(BUILD_DIR)/%.o: %.cpp $(HEADERS)
 	@mkdir -p $(BUILD_DIR)
-	@echo -e -n " [⧖] Compiling :\t$(CYN)$<...$(NC)"
-	@$(CXX) $(CXXFLAGS) $(CPPFLAGS) -o $@ -c $< && echo -e "\r [$(BGRN)✓$(NC)]"
+	@echo -n " [⧖] Compiling :\t$(CYN)$<...$(NC)"
+	@$(CXX) $(CXXFLAGS) $(CPPFLAGS) -o $@ -c $< && echo "\r [$(BGRN)✓$(NC)]"
 
 clean:
 	@rm -rf $(BUILD_DIR)
-	@echo -e "$(BRED)Object files removed$(NC)\n"
+	@echo "$(BRED)Object files removed$(NC)\n"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo -e "$(BRED)$(NAME) executable removed completely$(NC)\n"
+	@echo "$(BRED)$(NAME) executable removed completely$(NC)\n"
 
 re: fclean all
 
 init:
-	@echo -e "\n\t$(BMAG)Starting $(NAME) compilation$(NC) [C++]\n"
+	@echo "\n\t$(BMAG)Starting $(NAME) compilation$(NC) [C++]\n"
 
 finish:
-	@echo -e "\t$(BGRN)Compilation of $(NAME) completed!$(NC)\n"
+	@echo "\t$(BGRN)Compilation of $(NAME) completed!$(NC)\n"
 
 show_flags:
-	@echo -e -n " Flags used : $(NC)"
-	@echo -e "$(CYN)$(CXX) $(CXXFLAGS) $(CPPFLAGS)$(NC)\n"
+	@echo -n " Flags used : $(NC)"
+	@echo "$(CYN)$(CXX) $(CXXFLAGS) $(CPPFLAGS)$(NC)\n"
 
 debug:
 	@$(MAKE) --no-print-directory CXXFLAGS+="-g -Wall -Werror -Wextra -std=c++98"

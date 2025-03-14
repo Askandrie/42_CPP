@@ -6,14 +6,14 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 14:59:06 by aska              #+#    #+#             */
-/*   Updated: 2025/03/03 17:08:00 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/14 03:05:37 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ANIMAL_HPP
 #define ANIMAL_HPP
 
-#include "Colors.hpp"
+#include "../../Colors.hpp"
 #include <iostream>
 #include <string>
 

@@ -3,25 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 03:04:54 by aska              #+#    #+#             */
-/*   Updated: 2025/03/13 17:17:48 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/03/14 03:34:33 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
+#include <iomanip>
 
 Character::Character(std::string name) : _name(name)
 {
-    std::cout << "Character " BWHI << this->_name << RESET << "\tconstructor" << std::endl;
+    std::cout << BYEL "Character " BWHI << this->_name << RESET << "\tconstructor" << std::endl;
     for (int i = 0; i < MAX_MATERIA; i++)
         this->_materia[i] = NULL;
 }
 
 Character::Character(Character const & ori) : _name(ori.getName() + "_copy")
 {
-    std::cout << "Character " BWHI << this->_name << RESET << "\tcopy constructor" << std::endl;
+    std::cout << BYEL "Character " BWHI << this->_name << RESET << "\tcopy constructor" << std::endl;
     for(int i = 0; i < MAX_MATERIA; i++)
 	{
 		if ((ori._materia)[i])
@@ -33,7 +34,7 @@ Character::Character(Character const & ori) : _name(ori.getName() + "_copy")
 
 Character::~Character()
 {
-    std::cout << RED "Character " BWHI << this->_name << "\tdestructor" << RESET << std::endl;
+    std::cout << BYEL "Character " BWHI << this->_name << "\tdestructor" << RESET << std::endl;
 	for (int i = 0; i < MAX_MATERIA; i++)
 		if (this->_materia[i] != NULL)
 		{

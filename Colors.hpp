@@ -5,6 +5,11 @@
 #include "BaseBGColors.hpp"
 #include "BoldFGColors.hpp"
 #include "BoldBGColors.hpp"
+#include "ItaFGColors.hpp"
+#include "ItaBGColors.hpp"
+#include "DimFGColors.hpp"
+#include "DimBGColors.hpp"
+
 
 #define RESET "\033[0m"
 #define BOLD "\033[1m"

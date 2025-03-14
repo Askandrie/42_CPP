@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 16:05:50 by aska              #+#    #+#             */
-/*   Updated: 2025/03/13 04:18:34 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/14 02:43:41 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,24 @@ int main()
 
 	std::cout << BHBLU "Deconstructing" RESET << std::endl;
 	delete wrong_catta;
+	std::cout << std::endl;
+	std::cout << "-------------------------------------------------------" << std::endl;
+	std::cout << std::endl;
+
+	std::cout << BHBLU "Constructing" RESET << std::endl;
+	const Animal	*doggo1 = new Dog();
+	const Animal	*doggo2;
+
+	doggo2 = doggo1;
+	std::cout << std::endl;
+	std::cout << BHBLU "Testing" RESET << std::endl;
+	std::cout << "Doggo1 _type: " << doggo1->getType() <<std::endl;
+	std::cout << "Doggo2 _type: " << doggo2->getType() <<std::endl;
+	doggo1->makeSound();
+	doggo2->makeSound();
+	std::cout << std::endl;
+	std::cout << BHBLU "Deconstructing" RESET << std::endl;
+	delete doggo1;
 	std::cout << std::endl;
 
 	return (0);

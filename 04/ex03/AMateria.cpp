@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 01:33:55 by aska              #+#    #+#             */
-/*   Updated: 2025/03/13 16:35:42 by ygaiffie         ###   ########.fr       */
+/*   Updated: 2025/03/14 03:28:45 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@ AMateria::AMateria(std::string const &type) : _type(type)
 {
 	this->_isEquiped = false;
 	this->_ID = (long)this;
-	std::cout << HBLA "AMateria " RESET "constructor: " BWHI << this->_ID << RESET << std::endl;
+	std::cout << BYEL "AMateria " RESET "constructor: " BWHI << this->_ID << RESET << std::endl;
 }
 
 AMateria::AMateria(AMateria const & ori)
 {
 	if (this != & ori)
 		*this = ori;
-	std::cout << HBLA "AMateria " RESET "copy constructor: " BWHI << this->_ID << RESET << std::endl;
+	std::cout << BYEL "AMateria " RESET "copy constructor: " BWHI << this->_ID << RESET << std::endl;
 }
 
 AMateria::~AMateria()
 {
-	std::cout << HBLA "AMateria " HRED "destructor: " BWHI << this->_ID << RESET << std::endl;
+	std::cout << BYEL "AMateria " HRED "destructor: " BWHI << this->_ID << RESET << std::endl;
 }
 
 

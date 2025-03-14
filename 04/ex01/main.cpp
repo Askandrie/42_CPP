@@ -6,7 +6,7 @@
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 16:05:50 by aska              #+#    #+#             */
-/*   Updated: 2025/03/04 00:16:01 by aska             ###   ########.fr       */
+/*   Updated: 2025/03/14 03:08:29 by aska             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int main()
 {
-	std::cout << "\033[34mConstructing\033[0m" << std::endl;
+	std::cout << BHBLU "Constructing\033[0m" << std::endl;
 	const Animal	*meta[10];
 	for (int i = 0; i < 10; i++)
 	{
@@ -34,7 +34,7 @@ int main()
 	}
 	std::cout << std::endl;
 
-	std::cout << "\033[34mTesting\033[0m" << std::endl;
+	std::cout << BHBLU "Testing\033[0m" << std::endl;
 	for (int i = 0; i < 10; i++)
 	{
 		std::cout << std::endl;
@@ -43,7 +43,7 @@ int main()
 	}
 	std::cout << std::endl;
 
-	std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
+	std::cout << BHBLU "Deconstructing\033[0m" << std::endl;
 	for (int i = 0; i < 10; i++)
 		delete(meta[i]);
 
@@ -53,7 +53,7 @@ int main()
 	std::cout << "#### showing that the copy constructor creates a deep copy ####" << std::endl;
 	std::cout << std::endl;
 
-	std::cout << "\033[34mConstructing\033[0m" << std::endl;
+	std::cout << BHBLU "Constructing\033[0m" << std::endl;
 	// Dog *a = new Dog();
 	Cat *a = new Cat();
 	if (a == NULL)
@@ -76,24 +76,24 @@ int main()
 	}
 	std::cout << std::endl;
 
-	std::cout << "\033[34mTesting a\033[0m" << std::endl;
+	std::cout << BHBLU "Testing a\033[0m" << std::endl;
 	std::cout << "The " << a->getType() << " a has the following ideas: " << std::endl;
 	std::cout << BOLD << a->getIdeas(0) << RESET << std::endl;
 	a->printAllIdeas();
 	std::cout << std::endl;
 
-	std::cout << "\033[34mDeconstructing a\033[0m" << std::endl;
+	std::cout << BHBLU "Deconstructing a\033[0m" << std::endl;
 	delete(a);
 	std::cout << std::endl;
 
-	std::cout << "\033[34mTesting b\033[0m" << std::endl;
+	std::cout << BHBLU "Testing b\033[0m" << std::endl;
 	std::cout << "The " << b->getType() << " b has the following ideas: " << std::endl;
 	std::cout << BOLD << b->getIdeas(0) << RESET << std::endl;
 	std::cout << std::endl;
 	b->printAllIdeas();
 	std::cout << std::endl;
 
-	std::cout << "\033[34mDeconstructing b\033[0m" << std::endl;
+	std::cout << BHBLU "Deconstructing b\033[0m" << std::endl;
 	delete(b);
 
 	return (0);
