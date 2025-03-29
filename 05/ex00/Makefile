@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ygaiffie <ygaiffie@student.42.fr>          +#+  +:+       +#+         #
+#    By: aska <aska@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/12 12:53:10 by aska              #+#    #+#              #
-#    Updated: 2025/03/18 16:32:26 by ygaiffie         ###   ########.fr        #
+#    Updated: 2025/03/24 23:28:43 by aska             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,9 +23,10 @@ CXXFLAGS  	:=  -Wall -Werror -Wextra -std=c++98
 
 NAME		:=	Mommy,_when_I_growup,_I_want_to_be_a_bureaucrat!
 
-SRCS		:=	
+SRCS		:=	Bureaucrat.cpp \
+				main.cpp
 
-HEADERS		:=	
+HEADERS		:=	Bureaucrat.hpp
 
 BUILD_DIR	:=	.build
 OBJS		:=	$(addprefix $(BUILD_DIR)/, $(SRCS:.cpp=.o))
@@ -36,33 +37,33 @@ run: init show_flags $(NAME) finish
 	./$(NAME)
 
 $(NAME): $(OBJS)
-	@echo -n " Linking..."
-	@$(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OBJS) -o $(NAME) && echo "\t$(BGRN)Linking successful!$(NC)\n"
+	@echo -e -n " Linking..."
+	@$(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OBJS) -o $(NAME) && echo -e "\t$(BGRN)Linking successful!$(NC)\n"
 
 $(BUILD_DIR)/%.o: %.cpp $(HEADERS)
 	@mkdir -p $(BUILD_DIR)
-	@echo -n " [⧖] Compiling :\t$(CYN)$<...$(NC)"
-	@$(CXX) $(CXXFLAGS) $(CPPFLAGS) -o $@ -c $< && echo "\r [$(BGRN)✓$(NC)]"
+	@echo -e -n " [⧖] Compiling :\t$(CYN)$<...$(NC)"
+	@$(CXX) $(CXXFLAGS) $(CPPFLAGS) -o $@ -c $< && echo -e "\r [$(BGRN)✓$(NC)]"
 
 clean:
 	@rm -rf $(BUILD_DIR)
-	@echo "$(BRED)Object files removed$(NC)\n"
+	@echo -e "$(BRED)Object files removed$(NC)\n"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$(BRED)$(NAME) executable removed completely$(NC)\n"
+	@echo -e "$(BRED)$(NAME) executable removed completely$(NC)\n"
 
 re: fclean all
 
 init:
-	@echo "\n\t$(BMAG)Starting $(NAME) compilation$(NC) [C++]\n"
+	@echo -e "\n\t$(BMAG)Starting $(NAME) compilation$(NC) [C++]\n"
 
 finish:
-	@echo "\t$(BGRN)Compilation of $(NAME) completed!$(NC)\n"
+	@echo -e "\t$(BGRN)Compilation of $(NAME) completed!$(NC)\n"
 
 show_flags:
-	@echo -n " Flags used : $(NC)"
-	@echo "$(CYN)$(CXX) $(CXXFLAGS) $(CPPFLAGS)$(NC)\n"
+	@echo -e -n " Flags used : $(NC)"
+	@echo -e "$(CYN)$(CXX) $(CXXFLAGS) $(CPPFLAGS)$(NC)\n"
 
 debug:
 	@$(MAKE) --no-print-directory CXXFLAGS+="-g -Wall -Werror -Wextra -std=c++98"
