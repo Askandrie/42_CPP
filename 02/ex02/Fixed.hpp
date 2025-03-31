@@ -26,49 +26,48 @@
 
 class Fixed
 {
-	public:
-		Fixed(); // Constructeur par default
-		Fixed(const int i); // Constructeur avec argument
-		Fixed(const float f); // Constructeur avec argument
-		Fixed(const Fixed &origin); // Constructeur par copie
+  public:
+	Fixed();                    // Constructeur par default
+	Fixed(const int i);         // Constructeur avec argument
+	Fixed(const float f);       // Constructeur avec argument
+	Fixed(const Fixed &origin); // Constructeur par copie
 
-		Fixed &operator=(const Fixed &origin); // Operateur d'affectation par copie
-		~Fixed(); // Destructeur
+	Fixed &operator=(const Fixed &origin); // Operateur d'affectation par copie
+	~Fixed();                              // Destructeur
 
-		int		getRawBits();
-		void	setRawBits(const int raw);
-		
-		int		toInt() const ;
-		float	toFloat() const ;
+	int  getRawBits();
+	void setRawBits(const int raw);
 
-		bool	operator>(const Fixed &f) const;
-		bool	operator<(const Fixed &f) const;
-		bool	operator>=(const Fixed &f) const;
-		bool	operator<=(const Fixed &f) const;
-		bool	operator==(const Fixed &f) const;
-		bool	operator!=(const Fixed &f) const;
-		
-		Fixed	operator+(const Fixed &f) const;
-		Fixed	operator-(const Fixed &f) const;
-		Fixed	operator*(const Fixed &f) const;
-		Fixed	operator/(const Fixed &f) const;
+	int   toInt() const;
+	float toFloat() const;
 
-		Fixed	&operator++();
-		Fixed	operator++(int);
-		Fixed	&operator--();
-		Fixed	operator--(int);
+	bool operator>(const Fixed &f) const;
+	bool operator<(const Fixed &f) const;
+	bool operator>=(const Fixed &f) const;
+	bool operator<=(const Fixed &f) const;
+	bool operator==(const Fixed &f) const;
+	bool operator!=(const Fixed &f) const;
 
-		static Fixed &min(Fixed &a, Fixed &b);
-		static Fixed &max(Fixed &a, Fixed &b);
-		static const Fixed &min(const Fixed &a, const Fixed &b);
-		static const Fixed &max(const Fixed &a, const Fixed &b);
-		
-		private:
-		int _fixed_point;
-		static const int _fractional_bit = 8;
-		
-	};
-	
+	Fixed operator+(const Fixed &f) const;
+	Fixed operator-(const Fixed &f) const;
+	Fixed operator*(const Fixed &f) const;
+	Fixed operator/(const Fixed &f) const;
+
+	Fixed &operator++();
+	Fixed  operator++(int);
+	Fixed &operator--();
+	Fixed  operator--(int);
+
+	static Fixed       &min(Fixed &a, Fixed &b);
+	static Fixed       &max(Fixed &a, Fixed &b);
+	static const Fixed &min(const Fixed &a, const Fixed &b);
+	static const Fixed &max(const Fixed &a, const Fixed &b);
+
+  private:
+	int              _fixed_point;
+	static const int _fractional_bit = 8;
+};
+
 std::ostream &operator<<(std::ostream &o, Fixed const &f);
 
 #endif

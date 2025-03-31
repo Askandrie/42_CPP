@@ -16,27 +16,26 @@
 #include <iostream>
 #include <string>
 
-const std::string HRED = "\033[0;91m";
-const std::string HGRE = "\033[0;92m";
-const std::string HYEL = "\033[0;93m";
-const std::string HBLU = "\033[0;94m";
-const std::string HCYA = "\033[0;95m";
+const std::string HRED  = "\033[0;91m";
+const std::string HGRE  = "\033[0;92m";
+const std::string HYEL  = "\033[0;93m";
+const std::string HBLU  = "\033[0;94m";
+const std::string HCYA  = "\033[0;95m";
 const std::string RESET = "\033[0m";
-
 
 class Zombie
 {
-	public:
-		Zombie();
-		Zombie(std::string name);
-		~Zombie();
-		void SetName(std::string name);
-		void announce(void);
+  public:
+	Zombie();
+	Zombie(std::string name);
+	~Zombie();
+	void SetName(std::string name);
+	void announce(void);
 
-	private:
-		std::string name;
+  private:
+	std::string name;
 };
 
-Zombie* zombieHorde( int N, std::string name );
+Zombie *zombieHorde(int N, std::string name);
 
 #endif

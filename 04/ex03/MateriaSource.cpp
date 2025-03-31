@@ -14,14 +14,16 @@
 
 MateriaSource::MateriaSource()
 {
-	std::cout << BYEL << "MateriaSource" << RESET << "\tconstructor:\t" << (long)this << std::endl;
+	std::cout << BYEL << "MateriaSource" << RESET << "\tconstructor:\t"
+	          << (long)this << std::endl;
 	for (int i = 0; i < 4; i++)
 		_model[i] = NULL;
 }
 
-MateriaSource::MateriaSource(MateriaSource const & ori)
+MateriaSource::MateriaSource(MateriaSource const &ori)
 {
-	std::cout << BYEL << "MateriaSource" << RESET << "\tcopy const.:\t" << (long)this << std::endl;
+	std::cout << BYEL << "MateriaSource" << RESET << "\tcopy const.:\t"
+	          << (long)this << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
 		if (ori._model[i])
@@ -33,13 +35,14 @@ MateriaSource::MateriaSource(MateriaSource const & ori)
 
 MateriaSource::~MateriaSource()
 {
-	std::cout << BYEL << "MateriaSource" << RED << "\tdestructor:\t" << RESET << (long)this << std::endl;
+	std::cout << BYEL << "MateriaSource" << RED << "\tdestructor:\t" << RESET
+	          << (long)this << std::endl;
 	for (int i = 0; i < 4; i++)
 		if (_model[i])
 			delete _model[i];
 }
 
-MateriaSource &MateriaSource::operator=(MateriaSource const & ori)
+MateriaSource &MateriaSource::operator=(MateriaSource const &ori)
 {
 	if (this != &ori)
 	{
@@ -57,27 +60,30 @@ MateriaSource &MateriaSource::operator=(MateriaSource const & ori)
 	return *this;
 }
 
-void MateriaSource::learnMateria(AMateria* materia)
+void MateriaSource::learnMateria(AMateria *materia)
 {
 	for (int i = 0; i < 4; i++)
 	{
 		if (_model[i] == NULL)
 		{
-			std::cout << BR5G3B5 "MateriaSource " << materia->getType() << " learned" RESET << std::endl;
+			std::cout << BR5G3B5 "MateriaSource " << materia->getType()
+			          << " learned" RESET << std::endl;
 			_model[i] = materia;
 			return;
 		}
 	}
-    std::cout << BR5G3B5 "MateriaSource " << materia->getType() << " has no slot available" RESET << std::endl;
+	std::cout << BR5G3B5 "MateriaSource " << materia->getType()
+	          << " has no slot available" RESET << std::endl;
 }
 
-AMateria* MateriaSource::createMateria(std::string const & type)
+AMateria *MateriaSource::createMateria(std::string const &type)
 {
 	for (int i = 0; i < 4; i++)
 	{
 		if (_model[i] && _model[i]->getType() == type)
 			return _model[i]->clone();
 	}
-	std::cout << BR5G3B5 "MateriaSource" << type << " has no " << type << " materia" RESET << std::endl;
+	std::cout << BR5G3B5 "MateriaSource" << type << " has no " << type
+	          << " materia" RESET << std::endl;
 	return NULL;
 }

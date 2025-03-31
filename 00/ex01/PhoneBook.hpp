@@ -11,17 +11,19 @@
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 
-# include "../../Colors.hpp"
-# include "Contact.hpp"
-# include <iostream>
-# include <string>
-# include <iomanip>
-# include <cstdlib>
+#include "../../colors/Colors.hpp"
+#include "Contact.hpp"
+#include <cstdlib>
+#include <iomanip>
+#include <iostream>
+#include <string>
 
-# define MAX_CONTACTS 8
-# define AUTHORIZE_CHARS "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_+- "
+#define MAX_CONTACTS 8
+#define AUTHORIZE_CHARS                                                        \
+	"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_+- "
+
 class PhoneBook
 {
   public:
@@ -34,8 +36,8 @@ class PhoneBook
 
   private:
 	Contact contacts[MAX_CONTACTS];
-	int ContactCount;
-	int ContactIndex;
+	int     ContactCount;
+	int     ContactIndex;
 };
 
 #endif

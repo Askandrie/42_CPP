@@ -18,29 +18,38 @@ Harl::~Harl() {}
 
 void Harl::debug()
 {
-	std::cout << BGRN << "[ DEBUG ]\n" << DEBUG_MSG << RESET << std::endl << std::endl;
+	std::cout << BGRN << "[ DEBUG ]\n"
+	          << DEBUG_MSG << RESET << std::endl
+	          << std::endl;
 }
 
 void Harl::info()
 {
-	std::cout << BCYN << "[ INFO ]\n" << INFO_MSG << RESET << std::endl << std::endl;
+	std::cout << BCYN << "[ INFO ]\n"
+	          << INFO_MSG << RESET << std::endl
+	          << std::endl;
 }
 
 void Harl::warning()
 {
-	std::cout << BYEL << "[ WARNING ]\n" << WARNING_MSG << RESET << std::endl << std::endl;
+	std::cout << BYEL << "[ WARNING ]\n"
+	          << WARNING_MSG << RESET << std::endl
+	          << std::endl;
 }
 
 void Harl::error()
 {
-	std::cout << BRED << "[ ERROR ]\n" << ERROR_MSG << RESET << std::endl << std::endl;
+	std::cout << BRED << "[ ERROR ]\n"
+	          << ERROR_MSG << RESET << std::endl
+	          << std::endl;
 }
 
 void Harl::complain(std::string level)
 {
-	ptrFunc tabfunction[] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-	std::string tablevel[] = {"DEBUG", "INFO" ,"WARNING" ,"ERROR"};
-	int i = 0;
+	ptrFunc     tabfunction[] = {&Harl::debug, &Harl::info, &Harl::warning,
+	                             &Harl::error};
+	std::string tablevel[]    = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	int         i             = 0;
 
 	while (level != tablevel[i] && i < 4)
 		i++;
@@ -58,6 +67,4 @@ void Harl::complain(std::string level)
 		case 3:
 			this->error();
 	}
-
-	
 }

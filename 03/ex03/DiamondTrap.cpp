@@ -12,34 +12,40 @@
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name") , ScavTrap(name + "_clap_name"), FragTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap(std::string name)
+    : ClapTrap(name + "_clap_name"), ScavTrap(name + "_clap_name"),
+      FragTrap(name + "_clap_name")
 {
-    this->_name = name;
-    std::cout << "DiamondTrap\t" << HMAG << this->_name << RESET << "\tconstructed" << std::endl;
+	this->_name = name;
+	std::cout << "DiamondTrap\t" << HMAG << this->_name << RESET
+	          << "\tconstructed" << std::endl;
 }
 
-
-DiamondTrap::DiamondTrap(const DiamondTrap &origin) : ClapTrap(name + "_clap_name") , ScavTrap(name + "_clap_name"), FragTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap(const DiamondTrap &origin)
+    : ClapTrap(name + "_clap_name"), ScavTrap(name + "_clap_name"),
+      FragTrap(name + "_clap_name")
 {
-    *this = origin;
-    std::cout << "DiamondTrap\t" << HMAG << _name << RESET << "\tcopied" << std::endl;
+	*this = origin;
+	std::cout << "DiamondTrap\t" << HMAG << _name << RESET << "\tcopied"
+	          << std::endl;
 }
 
 DiamondTrap::~DiamondTrap()
 {
-    std::cout << "DiamondTrap\t" << HMAG << _name << RESET << "\tdestroyed" << std::endl;
+	std::cout << "DiamondTrap\t" << HMAG << _name << RESET << "\tdestroyed"
+	          << std::endl;
 }
 
 DiamondTrap &DiamondTrap::operator=(const DiamondTrap &origin)
 {
-    if (this != &origin)
-        _name = origin._name;
-    return *this;
+	if (this != &origin)
+		_name = origin._name;
+	return *this;
 }
 
 void DiamondTrap::attack(const std::string &target)
 {
-    ScavTrap::attack(target);
+	ScavTrap::attack(target);
 }
 
 void DiamondTrap::whoAmI()

@@ -16,31 +16,31 @@
 #include <iostream>
 #include <string>
 
-#include "../../Colors.hpp"
+#include "../../colors/Colors.hpp"
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
 #define DEFAULT_DIAMONDTRAP_NAME "DiamondTrap"
 
 class DiamondTrap : public ScavTrap, public FragTrap
 {
-    private:
-        std::string _name;
+  private:
+	std::string _name;
 
-    public:
-        using FragTrap::hitPoints;
-        using FragTrap::attackDamage;
-        using ScavTrap::energyPoints;
-        using ScavTrap::attack;
+  public:
+	using FragTrap::attackDamage;
+	using FragTrap::hitPoints;
+	using ScavTrap::attack;
+	using ScavTrap::energyPoints;
 
-        DiamondTrap(std::string name = DEFAULT_DIAMONDTRAP_NAME);
-        DiamondTrap(const DiamondTrap &origin);
-        ~DiamondTrap();
-        DiamondTrap &operator=(const DiamondTrap &origin);
+	DiamondTrap(std::string name = DEFAULT_DIAMONDTRAP_NAME);
+	DiamondTrap(const DiamondTrap &origin);
+	~DiamondTrap();
+	DiamondTrap &operator=(const DiamondTrap &origin);
 
-        void attack(const std::string &target);
-        void whoAmI();
+	void attack(const std::string &target);
+	void whoAmI();
 };
 
 #endif

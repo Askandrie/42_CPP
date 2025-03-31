@@ -21,29 +21,27 @@
 #define MAG "\033[0;35m"
 #define RESET "\033[0m"
 
-
 #include <cmath>
 #include <iostream>
 
 class Fixed
 {
-	public:
-		Fixed(); // Constructeur par default
-		Fixed(const int i); // Constructeur avec argument
-		Fixed(const float f); // Constructeur avec argument
-		Fixed(const Fixed &origin); // Constructeur par copie
+  public:
+	Fixed();                    // Constructeur par default
+	Fixed(const int i);         // Constructeur avec argument
+	Fixed(const float f);       // Constructeur avec argument
+	Fixed(const Fixed &origin); // Constructeur par copie
 
-		Fixed &operator=(const Fixed &origin); // Operateur d'affectation par copie
-		~Fixed(); // Destructeur
-		int		getRawBits();
-		void	setRawBits(const int raw);
-		int		toInt() const ;
-		float	toFloat() const ;
-		
-	private:
-		int					_fixed_point;
-		static const int	_fractional_bit = 8;
+	Fixed &operator=(const Fixed &origin); // Operateur d'affectation par copie
+	~Fixed();                              // Destructeur
+	int   getRawBits();
+	void  setRawBits(const int raw);
+	int   toInt() const;
+	float toFloat() const;
 
+  private:
+	int              _fixed_point;
+	static const int _fractional_bit = 8;
 };
 
 std::ostream &operator<<(std::ostream &o, Fixed const &f);

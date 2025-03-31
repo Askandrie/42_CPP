@@ -24,5 +24,4 @@ int main()
 
 	delete zombie1;
 	return 0;
-	
 }

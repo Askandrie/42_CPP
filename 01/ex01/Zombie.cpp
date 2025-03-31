@@ -30,7 +30,8 @@ Zombie::~Zombie()
 
 void Zombie::announce()
 {
-	std::cout << HYEL << name << RESET << ": " << "BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << HYEL << name << RESET << ": "
+	          << "BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 void Zombie::SetName(std::string name)

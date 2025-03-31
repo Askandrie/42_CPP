@@ -13,44 +13,48 @@
 #ifndef CLAPTRAP_HPP
 #define CLAPTRAP_HPP
 
+#include "../../colors/Colors.hpp"
 #include <iostream>
 #include <string>
-#include "../../Colors.hpp"
 
 #define DEFAULT_CLAPTRAP_HIT_POINTS 10
 #define DEFAULT_CLAPTRAP_ENERGY_POINTS 10
 #define DEFAULT_CLAPTRAP_ATTACK_DAMAGE 0
 
-class	ClapTrap
+class ClapTrap
 {
-	protected:
-		std::string name;
-		unsigned int hitPoints;
-		unsigned int energyPoints;
-		unsigned int attackDamage;
-	
-/* -------------------------- OrthodoxCanonicalForm ------------------------- */
-	public:
-		ClapTrap();
-		ClapTrap(std::string name);
-		ClapTrap(const ClapTrap &origin);
-		~ClapTrap();
-		ClapTrap &operator=(const ClapTrap &origin);
+  protected:
+	std::string  name;
+	unsigned int hitPoints;
+	unsigned int energyPoints;
+	unsigned int attackDamage;
 
-/* -------------------------------- Functions ------------------------------- */
-		void attack(const std::string &target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
-		void displayStats();
+	/* -------------------------- OrthodoxCanonicalForm
+	 * ------------------------- */
+  public:
+	ClapTrap();
+	ClapTrap(std::string name);
+	ClapTrap(const ClapTrap &origin);
+	~ClapTrap();
+	ClapTrap &operator=(const ClapTrap &origin);
 
-/* --------------------------------- Getters -------------------------------- */
-		std::string getName() const;
-		unsigned int getHitPoints() const;
-		unsigned int getEnergyPoints() const;
-		unsigned int getAttackDamage() const;
+	/* -------------------------------- Functions
+	 * ------------------------------- */
+	void attack(const std::string &target);
+	void takeDamage(unsigned int amount);
+	void beRepaired(unsigned int amount);
+	void displayStats();
 
-/* --------------------------------- Setters -------------------------------- */
-		void setAttackDamage(unsigned int attackDamage);
+	/* --------------------------------- Getters
+	 * -------------------------------- */
+	std::string  getName() const;
+	unsigned int getHitPoints() const;
+	unsigned int getEnergyPoints() const;
+	unsigned int getAttackDamage() const;
+
+	/* --------------------------------- Setters
+	 * -------------------------------- */
+	void setAttackDamage(unsigned int attackDamage);
 };
 
 #endif

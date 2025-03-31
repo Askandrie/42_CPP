@@ -11,12 +11,12 @@
 /* ************************************************************************** */
 
 #ifndef MAIN_HPP
-# define MAIN_HPP
+#define MAIN_HPP
 
-# include <iostream>
-# include <string>
-# include "PhoneBook.hpp"
-# include "../../Colors.hpp"
-# include "Contact.hpp"
+#include "../../colors/Colors.hpp"
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
+#include <iostream>
+#include <string>
 
 #endif

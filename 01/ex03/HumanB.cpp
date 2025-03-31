@@ -15,7 +15,7 @@
 
 HumanB::HumanB(std::string name)
 {
-	this->name = name;
+	this->name     = name;
 	this->is_armed = false;
 	std::cout << this->name << " is here" << std::endl;
 }
@@ -24,15 +24,17 @@ HumanB::~HumanB(void) {}
 
 void HumanB::setWeapon(Weapon &weapon)
 {
-	this->weapon = &weapon;
+	this->weapon   = &weapon;
 	this->is_armed = true;
-	std::cout << this->name << " loot a " << this->weapon->getType() << std::endl;
+	std::cout << this->name << " loot a " << this->weapon->getType()
+	          << std::endl;
 }
 
 void HumanB::attack(void)
 {
-    if (this->is_armed)
-        std::cout << this->name << " attacks with his " << this->weapon->getType() << std::endl;
-    else
-        std::cout << this->name << " attacks with his fists." << std::endl;
+	if (this->is_armed)
+		std::cout << this->name << " attacks with his "
+		          << this->weapon->getType() << std::endl;
+	else
+		std::cout << this->name << " attacks with his fists." << std::endl;
 }

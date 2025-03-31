@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AAnimal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                         :+:      :+:    :+: */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,23 +13,23 @@
 #ifndef AANIMAL_HPP
 #define AANIMAL_HPP
 
-#include "../../Colors.hpp"
+#include "../../colors/Colors.hpp"
 #include <iostream>
 #include <string>
 
 class AAnimal
 {
-    protected:
-        std::string type;
-    
-    public:
-        AAnimal();
-        AAnimal(const AAnimal &src);
-        AAnimal &operator=(const AAnimal &ori);
-        virtual ~AAnimal();
-    
-        virtual void makeSound() = 0;
-        std::string getType() const;
+  protected:
+	std::string type;
+
+  public:
+	AAnimal();
+	AAnimal(const AAnimal &src);
+	AAnimal &operator=(const AAnimal &ori);
+	virtual ~AAnimal();
+
+	virtual void makeSound() = 0;
+	std::string  getType() const;
 };
 
 #endif

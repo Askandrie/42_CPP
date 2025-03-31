@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AAnimal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                         :+:      :+:    :+: */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aska <aska@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -14,29 +14,33 @@
 
 AAnimal::AAnimal() : type("Animal")
 {
-    std::cout << BLU <<"AAnimal" << RESET << "\tdefault constructor called" << std::endl;
+	std::cout << BLU << "AAnimal" << RESET << "\tdefault constructor called"
+	          << std::endl;
 }
 
 AAnimal::AAnimal(const AAnimal &src)
 {
-    std::cout << BLU <<"AAnimal" << RESET << "\tcopy constructor called" << std::endl;
-    *this = src;
+	std::cout << BLU << "AAnimal" << RESET << "\tcopy constructor called"
+	          << std::endl;
+	*this = src;
 }
 
 AAnimal &AAnimal::operator=(const AAnimal &ori)
 {
-    std::cout << BLU <<"AAnimal" << RESET << "\tassignment operator called" << std::endl;
-    if (this != &ori)
-        this->type = ori.type;
-    return *this;
+	std::cout << BLU << "AAnimal" << RESET << "\tassignment operator called"
+	          << std::endl;
+	if (this != &ori)
+		this->type = ori.type;
+	return *this;
 }
 
 AAnimal::~AAnimal()
 {
-    std::cout << RED <<"AAnimal" << "\tdestructor called" << RESET << std::endl;
+	std::cout << RED << "AAnimal"
+	          << "\tdestructor called" << RESET << std::endl;
 }
 
 std::string AAnimal::getType() const
 {
-    return this->type;
+	return this->type;
 }

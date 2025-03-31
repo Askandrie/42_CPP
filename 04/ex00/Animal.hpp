@@ -13,7 +13,7 @@
 #ifndef ANIMAL_HPP
 #define ANIMAL_HPP
 
-#include "../../Colors.hpp"
+#include "../../colors/Colors.hpp"
 #include <iostream>
 #include <string>
 
@@ -21,17 +21,17 @@
 
 class Animal
 {
-    protected:
-        std::string type;
-    
-    public:
-        Animal(std::string type = DEFAULT_ANIMAL_TYPE);
-        Animal(const Animal &src);
-        Animal &operator=(const Animal &ori);
-        virtual ~Animal();
-    
-        virtual void makeSound() const;
-        std::string getType() const;
+  protected:
+	std::string type;
+
+  public:
+	Animal(std::string type = DEFAULT_ANIMAL_TYPE);
+	Animal(const Animal &src);
+	Animal &operator=(const Animal &ori);
+	virtual ~Animal();
+
+	virtual void makeSound() const;
+	std::string  getType() const;
 };
 
 #endif

@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #pragma once
-#include "../../Colors.hpp"
+#include "../../colors/Colors.hpp"
 
 #include <iostream>
 #include <string>
@@ -20,11 +20,11 @@
 
 class Brain
 {
-    public:
-        Brain();
-        Brain(const Brain &src);
-        Brain &operator=(const Brain &ori);
-        ~Brain();
-    
-        std::string ideas[MAX_IDEAS];
+  public:
+	Brain();
+	Brain(const Brain &src);
+	Brain &operator=(const Brain &ori);
+	~Brain();
+
+	std::string ideas[MAX_IDEAS];
 };

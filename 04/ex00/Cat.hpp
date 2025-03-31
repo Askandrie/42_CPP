@@ -17,12 +17,11 @@
 
 class Cat : public Animal
 {
-    public:
-        Cat(std::string type = CAT_TYPE);
-        Cat(const Cat &src);
-        Cat &operator=(const Cat &ori);
-        ~Cat();
-    
-        void makeSound() const;
-};
+  public:
+	Cat(std::string type = CAT_TYPE);
+	Cat(const Cat &src);
+	Cat &operator=(const Cat &ori);
+	~Cat();
 
+	void makeSound() const;
+};

@@ -38,15 +38,16 @@ void Harl::error()
 
 void Harl::complain(std::string level)
 {
-	ptrFunc tabfunction[] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-	std::string tablevel[] = {"DEBUG", "INFO" ,"WARNING" ,"ERROR"};
+	ptrFunc     tabfunction[] = {&Harl::debug, &Harl::info, &Harl::warning,
+	                             &Harl::error};
+	std::string tablevel[]    = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 	for (int i = 0; i < 4; i++)
 	{
 		if (level == tablevel[i])
 		{
 			(this->*tabfunction[i])();
-			return ;
+			return;
 		}
 	}
 

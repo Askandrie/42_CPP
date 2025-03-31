@@ -11,15 +11,15 @@
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include "Brain.hpp"
 #include <cstdlib>
 
 int main()
 {
 	std::cout << BHBLU "Constructing\033[0m" << std::endl;
-	const Animal	*meta[10];
+	const Animal *meta[10];
 	for (int i = 0; i < 10; i++)
 	{
 		if (i % 2)
@@ -38,19 +38,22 @@ int main()
 	for (int i = 0; i < 10; i++)
 	{
 		std::cout << std::endl;
-		std::cout << "Animal _type: " << YEL << meta[i]->getType() << RESET << std::endl;
+		std::cout << "Animal _type: " << YEL << meta[i]->getType() << RESET
+		          << std::endl;
 		meta[i]->makeSound();
 	}
 	std::cout << std::endl;
 
 	std::cout << BHBLU "Deconstructing\033[0m" << std::endl;
 	for (int i = 0; i < 10; i++)
-		delete(meta[i]);
+		delete (meta[i]);
 
-//THIS PART IS FOR TESTING DEEP COPY ↓
+	// THIS PART IS FOR TESTING DEEP COPY ↓
 
 	std::cout << std::endl << std::endl;
-	std::cout << "#### showing that the copy constructor creates a deep copy ####" << std::endl;
+	std::cout
+	    << "#### showing that the copy constructor creates a deep copy ####"
+	    << std::endl;
 	std::cout << std::endl;
 
 	std::cout << BHBLU "Constructing\033[0m" << std::endl;
@@ -77,24 +80,26 @@ int main()
 	std::cout << std::endl;
 
 	std::cout << BHBLU "Testing a\033[0m" << std::endl;
-	std::cout << "The " << a->getType() << " a has the following ideas: " << std::endl;
+	std::cout << "The " << a->getType()
+	          << " a has the following ideas: " << std::endl;
 	std::cout << BOLD << a->getIdeas(0) << RESET << std::endl;
 	a->printAllIdeas();
 	std::cout << std::endl;
 
 	std::cout << BHBLU "Deconstructing a\033[0m" << std::endl;
-	delete(a);
+	delete (a);
 	std::cout << std::endl;
 
 	std::cout << BHBLU "Testing b\033[0m" << std::endl;
-	std::cout << "The " << b->getType() << " b has the following ideas: " << std::endl;
+	std::cout << "The " << b->getType()
+	          << " b has the following ideas: " << std::endl;
 	std::cout << BOLD << b->getIdeas(0) << RESET << std::endl;
 	std::cout << std::endl;
 	b->printAllIdeas();
 	std::cout << std::endl;
 
 	std::cout << BHBLU "Deconstructing b\033[0m" << std::endl;
-	delete(b);
+	delete (b);
 
 	return (0);
 }

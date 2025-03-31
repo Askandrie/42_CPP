@@ -74,8 +74,8 @@ int main()
 	source.learnMateria(new Cure());
 	std::cout << std::endl;
 
-	AMateria *ice = source.createMateria("ice");
-	AMateria *cure = source.createMateria("cure");
+	AMateria *ice   = source.createMateria("ice");
+	AMateria *cure  = source.createMateria("cure");
 	AMateria *cure3 = source.createMateria("cure");
 	std::cout << std::endl;
 
@@ -103,13 +103,13 @@ int main()
 
 	pouffie.use(0, waikiki);
 	std::cout << std::endl;
-	
+
 	MateriaSource Jenova(source);
 	std::cout << std::endl;
 
-	AMateria *ice2 = Jenova.createMateria("ice");
+	AMateria *ice2  = Jenova.createMateria("ice");
 	AMateria *cure2 = Jenova.createMateria("cure");
-	AMateria *fire = Jenova.createMateria("fire");
+	AMateria *fire  = Jenova.createMateria("fire");
 	std::cout << std::endl;
 
 	waikiki.equip(cure2);

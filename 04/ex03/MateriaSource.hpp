@@ -11,23 +11,23 @@
 /* ************************************************************************** */
 
 #pragma once
-#include "IMateriaSource.hpp"
 #include "AMateria.hpp"
+#include "IMateriaSource.hpp"
 #include <iostream>
 #include <string>
 
 class MateriaSource : virtual public IMateriaSource
 {
-	public:
-		MateriaSource();
-		MateriaSource(MateriaSource const & ori);
-		~MateriaSource();
+  public:
+	MateriaSource();
+	MateriaSource(MateriaSource const &ori);
+	~MateriaSource();
 
-		MateriaSource &operator=(MateriaSource const & ori);
+	MateriaSource &operator=(MateriaSource const &ori);
 
-		void learnMateria(AMateria* materia);
-		AMateria* createMateria(std::string const & type);
+	void      learnMateria(AMateria *materia);
+	AMateria *createMateria(std::string const &type);
 
-	private:
-		AMateria *_model[4];
+  private:
+	AMateria *_model[4];
 };

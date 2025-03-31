@@ -14,25 +14,28 @@
 
 Brain::Brain()
 {
-    std::cout << MAG << "Brain" << RESET <<"\tdefault constructor called" << std::endl;
+	std::cout << MAG << "Brain" << RESET << "\tdefault constructor called"
+	          << std::endl;
 }
 
 Brain::Brain(const Brain &src)
 {
-    *this = src;
-    std::cout << MAG << "Brain" << RESET <<"\tcopy constructor called" << std::endl;
+	*this = src;
+	std::cout << MAG << "Brain" << RESET << "\tcopy constructor called"
+	          << std::endl;
 }
 
 Brain &Brain::operator=(const Brain &ori)
 {
-    if (this != &ori)
-    for (int i = 0; i < 100; i++)
-        this->ideas[i] = ori.ideas[i];
-    return *this;
-    std::cout << MAG << "Brain" << RESET <<"\tassignment operator called" << std::endl;
+	if (this != &ori)
+		for (int i = 0; i < 100; i++)
+			this->ideas[i] = ori.ideas[i];
+	return *this;
+	std::cout << MAG << "Brain" << RESET << "\tassignment operator called"
+	          << std::endl;
 }
 
 Brain::~Brain()
 {
-    std::cout << RED << "Brain\tdestructor called" << RESET << std::endl;
+	std::cout << RED << "Brain\tdestructor called" << RESET << std::endl;
 }

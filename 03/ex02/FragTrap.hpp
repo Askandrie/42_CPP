@@ -13,9 +13,9 @@
 #ifndef FragTrap_HPP
 #define FragTrap_HPP
 
+#include "ClapTrap.hpp"
 #include <iostream>
 #include <string>
-#include "ClapTrap.hpp"
 
 #define DEFAULT_FRAGTRAP_HIT_POINTS 100
 #define DEFAULT_FRAGTRAP_ENERGY_POINTS 100
@@ -24,15 +24,17 @@
 
 class FragTrap : public ClapTrap
 {
-/* -------------------------- OrthodoxCanonicalForm ------------------------- */
-    public:
-        FragTrap(std::string name = DEFAULT_FRAGTRAP_NAME);
-        FragTrap(const FragTrap &origin);
-        ~FragTrap();
-        FragTrap &operator=(const FragTrap &origin);
+	/* -------------------------- OrthodoxCanonicalForm
+	 * ------------------------- */
+  public:
+	FragTrap(std::string name = DEFAULT_FRAGTRAP_NAME);
+	FragTrap(const FragTrap &origin);
+	~FragTrap();
+	FragTrap &operator=(const FragTrap &origin);
 
-/* -------------------------------- Functions ------------------------------- */
-        void highFivesGuys();
+	/* -------------------------------- Functions
+	 * ------------------------------- */
+	void highFivesGuys();
 };
 
 #endif

@@ -16,8 +16,8 @@
 #include <string>
 
 const std::string RESET = "\033[0m";
-const std::string BOLD = "\033[1m";
-const std::string UND = "\033[4m";
+const std::string BOLD  = "\033[1m";
+const std::string UND   = "\033[4m";
 
 const std::string BLK = "\033[30m";
 const std::string RED = "\033[31m";

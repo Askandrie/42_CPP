@@ -10,14 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <string>
 
 int printUsage()
 {
-	std::cout << "Usage: <Filename> <find STR> <replace STR>\n"
-			  << std::endl;
+	std::cout << "Usage: <Filename> <find STR> <replace STR>\n" << std::endl;
 	return 1;
 }
 

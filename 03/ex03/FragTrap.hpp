@@ -13,10 +13,10 @@
 #ifndef FragTrap_HPP
 #define FragTrap_HPP
 
+#include "../../colors/Colors.hpp"
+#include "ClapTrap.hpp"
 #include <iostream>
 #include <string>
-#include "../../Colors.hpp"
-#include "ClapTrap.hpp"
 
 #define DEFAULT_FRAGTRAP_HIT_POINTS 100
 #define DEFAULT_FRAGTRAP_ENERGY_POINTS 100
@@ -24,16 +24,18 @@
 
 class FragTrap : virtual public ClapTrap
 {
-/* -------------------------- OrthodoxCanonicalForm ------------------------- */
-    public:
-        FragTrap();
-        FragTrap(std::string name);
-        FragTrap(const FragTrap &origin);
-        ~FragTrap();
-        FragTrap &operator=(const FragTrap &origin);
+	/* -------------------------- OrthodoxCanonicalForm
+	 * ------------------------- */
+  public:
+	FragTrap();
+	FragTrap(std::string name);
+	FragTrap(const FragTrap &origin);
+	~FragTrap();
+	FragTrap &operator=(const FragTrap &origin);
 
-/* -------------------------------- Functions ------------------------------- */
-        void highFivesGuys();
+	/* -------------------------------- Functions
+	 * ------------------------------- */
+	void highFivesGuys();
 };
 
 #endif

@@ -24,19 +24,20 @@
 
 class Fixed
 {
-	public:
-		Fixed(); // Constructeur par default
-		Fixed(const Fixed &origin); // Constructeur par copie
-		Fixed &operator=(const Fixed &origin); // Operateur d'affectation par copie
-		~Fixed(); // Destructeur
-		// Fixed(Fixed &&) noexcept; // Constructeur par deplacement
-		// Fixed &operator=(Fixed &&) noexcept; // Operateur d'affectation par deplacement
-		int		getRawBits();
-		void	setRawBits(const int raw);
-		
-	private:
-		int 				_fixed_point;
-		static const int	_fractional_bit = FRACTIONAL_BITS;
+  public:
+	Fixed();                               // Constructeur par default
+	Fixed(const Fixed &origin);            // Constructeur par copie
+	Fixed &operator=(const Fixed &origin); // Operateur d'affectation par copie
+	~Fixed();                              // Destructeur
+	// Fixed(Fixed &&) noexcept; // Constructeur par deplacement
+	// Fixed &operator=(Fixed &&) noexcept; // Operateur d'affectation par
+	// deplacement
+	int  getRawBits();
+	void setRawBits(const int raw);
+
+  private:
+	int              _fixed_point;
+	static const int _fractional_bit = FRACTIONAL_BITS;
 };
 
 #endif

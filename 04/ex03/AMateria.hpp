@@ -11,32 +11,32 @@
 /* ************************************************************************** */
 
 #pragma once
+#include "../../colors/Colors.hpp"
+#include "ICharacter.hpp"
 #include <iostream>
 #include <string>
-#include "../../Colors.hpp"
-#include "ICharacter.hpp"
 
 #define DEFAULT_MATERIA_TYPE "unknown"
 
-class ICharacter ;
+class ICharacter;
 
 class AMateria
 {
-	protected:
-		std::string		_type;
-		bool			_isEquiped;
+  protected:
+	std::string _type;
+	bool        _isEquiped;
 
-	public:
-		AMateria(std::string const & type = DEFAULT_MATERIA_TYPE);
-		AMateria(AMateria const & ori);
-		virtual ~AMateria();
+  public:
+	AMateria(std::string const &type = DEFAULT_MATERIA_TYPE);
+	AMateria(AMateria const &ori);
+	virtual ~AMateria();
 
-		AMateria	&operator=(AMateria const & ori);
+	AMateria &operator=(AMateria const &ori);
 
-		virtual std::string const	&getType() const;
-		virtual AMateria 			*clone() const = 0;
-		virtual void				use(ICharacter& target);
+	virtual std::string const &getType() const;
+	virtual AMateria          *clone() const = 0;
+	virtual void               use(ICharacter &target);
 
-		virtual bool				isEquiped() const;
-		virtual void				setEquiped(bool equiped);
+	virtual bool isEquiped() const;
+	virtual void setEquiped(bool equiped);
 };

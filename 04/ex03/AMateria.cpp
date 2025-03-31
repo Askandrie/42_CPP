@@ -15,37 +15,39 @@
 AMateria::AMateria(std::string const &type) : _type(type)
 {
 	this->_isEquiped = false;
-	std::cout << BYEL "AMateria\t" RESET "constructor:\t" << (long)this << RESET << std::endl;
+	std::cout << BYEL "AMateria\t" RESET "constructor:\t" << (long)this << RESET
+	          << std::endl;
 }
 
-AMateria::AMateria(AMateria const & ori)
+AMateria::AMateria(AMateria const &ori)
 {
-	if (this != & ori)
+	if (this != &ori)
 		*this = ori;
-	std::cout << BYEL "AMateria\t" RESET "\tcopy const.:\t" << (long)this << RESET << std::endl;
+	std::cout << BYEL "AMateria\t" RESET "\tcopy const.:\t" << (long)this
+	          << RESET << std::endl;
 }
 
 AMateria::~AMateria()
 {
-	std::cout << BYEL "AMateria\t" HRED "destructor:\t" RESET << (long)this << RESET << std::endl;
+	std::cout << BYEL "AMateria\t" HRED "destructor:\t" RESET << (long)this
+	          << RESET << std::endl;
 }
 
-
-std::string const & AMateria::getType() const
+std::string const &AMateria::getType() const
 {
 	return (this->_type);
 }
 
-void AMateria::use(ICharacter& target)
+void AMateria::use(ICharacter &target)
 {
-	std::cout << this->_type <<"\tused on\t" << target.getName() << std::endl;
+	std::cout << this->_type << "\tused on\t" << target.getName() << std::endl;
 }
 
-AMateria & AMateria::operator=(AMateria const & ori)
+AMateria &AMateria::operator=(AMateria const &ori)
 {
 	if (this != &ori)
 	{
-		this->_type = ori.getType();
+		this->_type      = ori.getType();
 		this->_isEquiped = ori._isEquiped;
 	}
 	return *this;

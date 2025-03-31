@@ -10,13 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../../colors/Colors.hpp"
 #include "AAnimal.hpp"
+#include "Brain.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include "Brain.hpp"
 #include <cstdlib>
-#include "../../Colors.hpp"
-
 
 // int main()
 // {
@@ -40,8 +39,8 @@
 // 	for (int i = 0; i < 10; i++)
 // 	{
 // 		std::cout << std::endl;
-// 		std::cout << "AAnimal _type: " << YEL << meta[i]->getType() << RESET << std::endl;
-// 		meta[i]->makeSound();
+// 		std::cout << "AAnimal _type: " << YEL << meta[i]->getType() << RESET <<
+// std::endl; 		meta[i]->makeSound();
 // 	}
 // 	std::cout << std::endl;
 
@@ -52,8 +51,8 @@
 // //THIS PART IS FOR TESTING DEEP COPY ↓
 
 // 	std::cout << std::endl << std::endl;
-// 	std::cout << "#### showing that the copy constructor creates a deep copy ####" << std::endl;
-// 	std::cout << std::endl;
+// 	std::cout << "#### showing that the copy constructor creates a deep copy
+// ####" << std::endl; 	std::cout << std::endl;
 
 // 	std::cout << "\033[34mConstructing\033[0m" << std::endl;
 // 	// Dog *a = new Dog();
@@ -79,8 +78,8 @@
 // 	std::cout << std::endl;
 
 // 	std::cout << "\033[34mTesting a\033[0m" << std::endl;
-// 	std::cout << "The " << a->getType() << " a has the following ideas: " << std::endl;
-// 	std::cout << BOLD << a->getIdeas(0) << RESET << std::endl;
+// 	std::cout << "The " << a->getType() << " a has the following ideas: " <<
+// std::endl; 	std::cout << BOLD << a->getIdeas(0) << RESET << std::endl;
 // 	a->printAllIdeas();
 // 	std::cout << std::endl;
 
@@ -89,8 +88,8 @@
 // 	std::cout << std::endl;
 
 // 	std::cout << "\033[34mTesting b\033[0m" << std::endl;
-// 	std::cout << "The " << b->getType() << " b has the following ideas: " << std::endl;
-// 	std::cout << BOLD << b->getIdeas(0) << RESET << std::endl;
+// 	std::cout << "The " << b->getType() << " b has the following ideas: " <<
+// std::endl; 	std::cout << BOLD << b->getIdeas(0) << RESET << std::endl;
 // 	std::cout << std::endl;
 // 	b->printAllIdeas();
 // 	std::cout << std::endl;
@@ -103,18 +102,18 @@
 
 #define NB_ANIMALS 4
 
-inline void	printNl(int nb)
+inline void printNl(int nb)
 {
 	for (int i = 0; i < nb; i++)
 		std::cout << std::endl;
 }
 
-inline void	printMess(const std::string message)
+inline void printMess(const std::string message)
 {
 	std::cout << BR2G2B2 "/// " << message << " ///" RESET << std::endl;
 }
 
-void	arrayTest(void)
+void arrayTest(void)
 {
 	AAnimal *tab[NB_ANIMALS + 1];
 	tab[NB_ANIMALS] = NULL;
@@ -139,7 +138,7 @@ void	arrayTest(void)
 		delete tab[i];
 }
 
-inline void	testCopyDog(void)
+inline void testCopyDog(void)
 {
 	printMess("Creating Dog 1");
 	Dog *d1 = new Dog();
@@ -172,15 +171,15 @@ inline void	testCopyDog(void)
 	printNl(1);
 }
 
-inline void	testCopyCat(void)
+inline void testCopyCat(void)
 {
 	printMess("Creating Cat 1");
 	Cat *d1 = new Cat();
 	printNl(1);
 
 	printMess("Setting idea LETS EAT and LETS PLAY");
-	d1->setIdea("LETS EAT",0);
-	d1->setIdea("LETS PLAY",1);
+	d1->setIdea("LETS EAT", 0);
+	d1->setIdea("LETS PLAY", 1);
 
 	printMess("Print idea of Cat 1");
 	std::cout << "[1] " << d1->getIdeas(0) << std::endl;
@@ -200,9 +199,9 @@ inline void	testCopyCat(void)
 	std::cout << "[2] " << d2->getIdeas(1) << std::endl;
 	printNl(1);
 
-	printMess("Creating a Cat 3 and copying Cat 2 in it");	
+	printMess("Creating a Cat 3 and copying Cat 2 in it");
 	Cat *d3 = new Cat();
-	*d3 = *d2;
+	*d3     = *d2;
 	printNl(1);
 
 	printMess("Kill Cat 2");
@@ -224,32 +223,39 @@ inline void	testCopyCat(void)
 // 	delete grizzly;
 // }
 
-int	main(void)
+int main(void)
 {
 	std::cout << CLEAR_SCREEN << std::endl;
 
-	std::cout << BR2G2B2 "##########################################" << std::endl;
+	std::cout << BR2G2B2 "##########################################"
+	          << std::endl;
 	std::cout << "############### ARRAY TEST ###############" << std::endl;
-	std::cout << "##########################################" RESET << std::endl;
+	std::cout << "##########################################" RESET
+	          << std::endl;
 	arrayTest();
 	printNl(2);
 
-	std::cout << BR2G2B2 "##########################################" << std::endl;
+	std::cout << BR2G2B2 "##########################################"
+	          << std::endl;
 	std::cout << "############## COPY TEST DOG #############" << std::endl;
-	std::cout << "##########################################" RESET << std::endl;
+	std::cout << "##########################################" RESET
+	          << std::endl;
 	testCopyDog();
 	printNl(2);
 
-	std::cout << BR2G2B2 "##########################################" << std::endl;
+	std::cout << BR2G2B2 "##########################################"
+	          << std::endl;
 	std::cout << "############## COPY TEST CAT #############" << std::endl;
-	std::cout << "##########################################" RESET << std::endl;
+	std::cout << "##########################################" RESET
+	          << std::endl;
 	testCopyCat();
 	printNl(2);
-/*
-	CETTE FONCTION A ETE AJOUTEE POUR MONTRER QUE LA CLASSE N'EST PAS INSTANCIABLE DESORMAIS
-	SI VOUS DECOMMENTEZ LA FONCTION testCrashInstance() ET SON APPEL DANS LA FONCTION MAIN
-	--> VOUS NE POURREZ PLUS COMPILER
-*/
+	/*
+	    CETTE FONCTION A ETE AJOUTEE POUR MONTRER QUE LA CLASSE N'EST PAS
+	   INSTANCIABLE DESORMAIS SI VOUS DECOMMENTEZ LA FONCTION
+	   testCrashInstance() ET SON APPEL DANS LA FONCTION MAIN
+	    --> VOUS NE POURREZ PLUS COMPILER
+	*/
 	// testCrashInstance();
 	return (0);
 }

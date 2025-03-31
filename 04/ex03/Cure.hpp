@@ -11,21 +11,21 @@
 /* ************************************************************************** */
 
 #pragma once
+#include "../../colors/Colors.hpp"
 #include "AMateria.hpp"
 #include "ICharacter.hpp"
-#include "../../Colors.hpp"
 #include <iostream>
 #include <string>
 
 class Cure : public AMateria
 {
-    public:
-        Cure();
-        Cure(Cure const & ori);
-        ~Cure();
+  public:
+	Cure();
+	Cure(Cure const &ori);
+	~Cure();
 
-        Cure &operator=(Cure const & ori);
-        
-        AMateria* clone() const;
-        void use(ICharacter& target);
+	Cure &operator=(Cure const &ori);
+
+	AMateria *clone() const;
+	void      use(ICharacter &target);
 };

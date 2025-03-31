@@ -17,13 +17,15 @@
 
 #include <string>
 
-class Bureaucrat {
-private:
+class Bureaucrat
+{
+  private:
 	std::string const _name;
-	int _grade;
+	int               _grade;
 
-public:
-	Bureaucrat(std::string const name = DEFAULT_NAME, int grade = DEFAULT_GRADE);
+  public:
+	Bureaucrat(std::string const name  = DEFAULT_NAME,
+	           int               grade = DEFAULT_GRADE);
 	Bureaucrat(int grade);
 	Bureaucrat(std::string const name);
 	Bureaucrat(Bureaucrat const &other);
@@ -32,19 +34,21 @@ public:
 	Bureaucrat &operator=(Bureaucrat const &other);
 
 	std::string getName() const;
-	int getGrade() const;
+	int         getGrade() const;
 
 	void setGrade(int grade);
 	void incrementGrade();
 	void decrementGrade();
 
-	class GradeTooHighException : public std::exception {
-	public:
+	class GradeTooHighException : public std::exception
+	{
+	  public:
 		virtual const char *what() const throw();
 	};
 
-	class GradeTooLowException : public std::exception {
-	public:
+	class GradeTooLowException : public std::exception
+	{
+	  public:
 		virtual const char *what() const throw();
 	};
 };

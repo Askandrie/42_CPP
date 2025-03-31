@@ -52,26 +52,29 @@ Fixed::~Fixed()
 
 int Fixed::getRawBits()
 {
-	std::cout << HBLU << "getRawBits member function called" << RESET << std::endl;
+	std::cout << HBLU << "getRawBits member function called" << RESET
+	          << std::endl;
 	return this->_fixed_point;
 }
 
 void Fixed::setRawBits(const int raw)
 {
-	std::cout << HBLU << "setRawBits member function called" << RESET << std::endl;
+	std::cout << HBLU << "setRawBits member function called" << RESET
+	          << std::endl;
 	this->_fixed_point = raw;
 }
 
-
 Fixed &Fixed::operator=(const Fixed &origin)
 {
-	std::cout << MAG << "Copy Assigment Constructor Called" << RESET << std::endl;
+	std::cout << MAG << "Copy Assigment Constructor Called" << RESET
+	          << std::endl;
 	if (this != &origin)
 		this->_fixed_point = origin._fixed_point;
 	return *this;
 }
 
-std::ostream&	operator<<(std::ostream& o, Fixed const &f) {
+std::ostream &operator<<(std::ostream &o, Fixed const &f)
+{
 	o << f.toFloat();
 	return o;
 }

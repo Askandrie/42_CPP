@@ -31,4 +31,3 @@ void Zombie::announce()
 {
 	std::cout << HYEL << name << RESET << ": " << "BraiiiiiiinnnzzzZ..." << std::endl;
 }
-

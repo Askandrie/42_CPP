@@ -11,20 +11,21 @@
 /* ************************************************************************** */
 
 #pragma once
-#include <string>
-#include <iostream>
-#include "../../Colors.hpp"
+#include "../../colors/Colors.hpp"
 #include "AMateria.hpp"
+#include <iostream>
+#include <string>
 
-class	AMateria;
+class AMateria;
 
-class	ICharacter
+class ICharacter
 {
-	public:
-		virtual ~ICharacter() {}
-		virtual const std::string &getName() const = 0;
-		virtual void equip(AMateria *materia) = 0;
-		virtual void unequip(int idx) = 0;
-		virtual void use(int idx, ICharacter &target) = 0;
-		virtual AMateria*	getMateria(int idx) const = 0;
+  public:
+	virtual ~ICharacter() {}
+
+	virtual const std::string &getName() const                  = 0;
+	virtual void               equip(AMateria *materia)         = 0;
+	virtual void               unequip(int idx)                 = 0;
+	virtual void               use(int idx, ICharacter &target) = 0;
+	virtual AMateria          *getMateria(int idx) const        = 0;
 };

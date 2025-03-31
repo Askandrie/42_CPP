@@ -13,9 +13,9 @@
 #ifndef SCAVTRAP_HPP
 #define SCAVTRAP_HPP
 
+#include "ClapTrap.hpp"
 #include <iostream>
 #include <string>
-#include "ClapTrap.hpp"
 
 #define DEFAULT_SCAVTRAP_HIT_POINTS 100
 #define DEFAULT_SCAVTRAP_ENERGY_POINTS 50
@@ -24,19 +24,21 @@
 
 class ScavTrap : public ClapTrap
 {
-    private:
-        bool gateState;
-/* -------------------------- OrthodoxCanonicalForm ------------------------- */
-    public:
-        ScavTrap(std::string name = DEFAULT_SCAVTRAP_NAME);
-        ScavTrap(const ScavTrap &origin);
-        ~ScavTrap();
-        ScavTrap &operator=(const ScavTrap &origin);
+  private:
+	bool gateState;
+	/* -------------------------- OrthodoxCanonicalForm
+	 * ------------------------- */
+  public:
+	ScavTrap(std::string name = DEFAULT_SCAVTRAP_NAME);
+	ScavTrap(const ScavTrap &origin);
+	~ScavTrap();
+	ScavTrap &operator=(const ScavTrap &origin);
 
-/* -------------------------------- Functions ------------------------------- */
-        void attack(const std::string &target);
-        void guardGate();
-        void displayStats();
+	/* -------------------------------- Functions
+	 * ------------------------------- */
+	void attack(const std::string &target);
+	void guardGate();
+	void displayStats();
 };
 
 #endif

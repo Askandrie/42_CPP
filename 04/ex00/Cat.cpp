@@ -14,25 +14,29 @@
 
 Cat::Cat(std::string type) : Animal(type)
 {
-    std::cout << CYA "Cat " RESET "constructor called" << std::endl;
+	std::cout << CYA "Cat " RESET "constructor called" << std::endl;
 }
+
 Cat::Cat(const Cat &src) : Animal()
 {
-    std::cout << CYA "Cat " RESET "copy constructor called" << std::endl;
-    *this = src;
+	std::cout << CYA "Cat " RESET "copy constructor called" << std::endl;
+	*this = src;
 }
+
 Cat &Cat::operator=(const Cat &ori)
 {
-    std::cout << CYA "Cat " RESET "assignment operator called" << std::endl;
-    if (this != &ori)
-        this->type = ori.type;
-    return *this;
+	std::cout << CYA "Cat " RESET "assignment operator called" << std::endl;
+	if (this != &ori)
+		this->type = ori.type;
+	return *this;
 }
+
 Cat::~Cat()
 {
-    std::cout << HRED "Cat destructor called" RESET << std::endl;
+	std::cout << HRED "Cat destructor called" RESET << std::endl;
 }
+
 void Cat::makeSound() const
 {
-    std::cout << BOLD "Nya !" RESET << std::endl;
+	std::cout << BOLD "Nya !" RESET << std::endl;
 }

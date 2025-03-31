@@ -18,36 +18,39 @@
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-    this->hitPoints = DEFAULT_SCAVTRAP_HIT_POINTS;
-    this->energyPoints = DEFAULT_SCAVTRAP_ENERGY_POINTS;
-    this->attackDamage = DEFAULT_SCAVTRAP_ATTACK_DAMAGE;
-    this->gateState = false;
-    std::cout << "ScavTrap\t" << HMAG << this->name << RESET << "\tconstructed with parameter" << std::endl;
+	this->hitPoints    = DEFAULT_SCAVTRAP_HIT_POINTS;
+	this->energyPoints = DEFAULT_SCAVTRAP_ENERGY_POINTS;
+	this->attackDamage = DEFAULT_SCAVTRAP_ATTACK_DAMAGE;
+	this->gateState    = false;
+	std::cout << "ScavTrap\t" << HMAG << this->name << RESET
+	          << "\tconstructed with parameter" << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap const &origin) : ClapTrap(origin.name)
 {
-    *this = origin;
-    this->gateState = origin.gateState;
-    std::cout << "ScavTrap\t" << HMAG << name << RESET << "\tcopied" << std::endl;
+	*this           = origin;
+	this->gateState = origin.gateState;
+	std::cout << "ScavTrap\t" << HMAG << name << RESET << "\tcopied"
+	          << std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << "ScavTrap\t" << HMAG << name << RESET << "\tdestroyed" << std::endl;
+	std::cout << "ScavTrap\t" << HMAG << name << RESET << "\tdestroyed"
+	          << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(ScavTrap const &origin)
 {
-    if(this != &origin)
-    {
-        name = origin.name;
-        hitPoints = origin.hitPoints;
-        energyPoints = origin.energyPoints;
-        attackDamage = origin.attackDamage;
-        gateState = origin.gateState;
-    }
-    return *this;
+	if (this != &origin)
+	{
+		name         = origin.name;
+		hitPoints    = origin.hitPoints;
+		energyPoints = origin.energyPoints;
+		attackDamage = origin.attackDamage;
+		gateState    = origin.gateState;
+	}
+	return *this;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -56,32 +59,42 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &origin)
 
 void ScavTrap::guardGate()
 {
-    if (ClapTrap::isAlive() == false)
-        return;
-    if (gateState)
-        std::cout << "ScavTrap " << HMAG << name << RESET << " is already in Gate keeper mode" << std::endl;
-    else
-    {
-        gateState = true;
-        std::cout << "ScavTrap " << HMAG << name << RESET << " is now in Gate keeper mode" << std::endl;
-    }
+	if (ClapTrap::isAlive() == false)
+		return;
+	if (gateState)
+		std::cout << "ScavTrap " << HMAG << name << RESET
+		          << " is already in Gate keeper mode" << std::endl;
+	else
+	{
+		gateState = true;
+		std::cout << "ScavTrap " << HMAG << name << RESET
+		          << " is now in Gate keeper mode" << std::endl;
+	}
 }
 
 void ScavTrap::displayStats()
 {
-    std::cout << MAG << name << RESET << std::endl;
-    std::cout << "|---" << HBLU << "HP:\t" << HGRE << hitPoints << RESET << std::endl;
-    std::cout << "|---" << HBLU << "EP:\t" << HGRE << energyPoints << RESET << std::endl;
-    std::cout << "|---" << HBLU << "AD:\t" << HGRE << attackDamage << RESET << std::endl;
-    std::cout << "|---" << HBLU << "GS:\t" << HGRE << (gateState ? "ON" : "OFF") << RESET << std::endl;
-    std::cout << std::endl;
+	std::cout << MAG << name << RESET << std::endl;
+	std::cout << "|---" << HBLU << "HP:\t" << HGRE << hitPoints << RESET
+	          << std::endl;
+	std::cout << "|---" << HBLU << "EP:\t" << HGRE << energyPoints << RESET
+	          << std::endl;
+	std::cout << "|---" << HBLU << "AD:\t" << HGRE << attackDamage << RESET
+	          << std::endl;
+	std::cout << "|---" << HBLU << "GS:\t" << HGRE << (gateState ? "ON" : "OFF")
+	          << RESET << std::endl;
+	std::cout << std::endl;
 }
 
-void ScavTrap::attack(const std::string& target)
+void ScavTrap::attack(const std::string &target)
 {
-    if (ClapTrap::isAlive() && ClapTrap::haveEnergy())
-    {
-        --energyPoints;
-        std::cout << "ScavTrap " << HMAG << name << RESET << " uses a super ScavTrap attack on " << target << " which results in " << attackDamage << " damage points!\n";    --energyPoints;
-    }
+	if (ClapTrap::isAlive() && ClapTrap::haveEnergy())
+	{
+		--energyPoints;
+		std::cout << "ScavTrap " << HMAG << name << RESET
+		          << " uses a super ScavTrap attack on " << target
+		          << " which results in " << attackDamage
+		          << " damage points!\n";
+		--energyPoints;
+	}
 }

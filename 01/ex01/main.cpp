@@ -14,18 +14,18 @@
 
 int main(int argc, char **argv)
 {
-	Zombie	*horde;
+	Zombie *horde;
 
 	horde = zombieHorde(argc - 1, "Horde Member");
 	if (horde == NULL)
 		return (EXIT_FAILURE);
-	
-	for (int i = 0; i < argc - 1;++i)
+
+	for (int i = 0; i < argc - 1; ++i)
 	{
-		horde[i].SetName(argv[i + 1]);	
+		horde[i].SetName(argv[i + 1]);
 		horde[i].announce();
 	}
-	
+
 	delete[] horde;
 	horde = zombieHorde(0, "Failed");
 	return (EXIT_SUCCESS);

@@ -11,30 +11,31 @@
 /* ************************************************************************** */
 
 #pragma once
-#include <string>
-#include <iostream>
-#include "../../Colors.hpp"
-#include "ICharacter.hpp"
+#include "../../colors/Colors.hpp"
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
+#include <iostream>
+#include <string>
 
 #define DEFAULT_NAME "unknown"
 #define MAX_MATERIA 4
 
 class Character : virtual public ICharacter
 {
-    public:
-        Character(std::string name = DEFAULT_NAME);
-        Character(Character const & ori);
-        ~Character();
-        
-        Character &operator=(Character const & ori);
+  public:
+	Character(std::string name = DEFAULT_NAME);
+	Character(Character const &ori);
+	~Character();
 
-        const std::string   &getName() const;
-        void                equip(AMateria *materia);
-        void                unequip(int idx);
-        void                use(int idx, ICharacter &target);
-        AMateria			*getMateria(int idx) const;
-    private:
-        std::string			_name;
-        AMateria 			*_materia[MAX_MATERIA];
+	Character &operator=(Character const &ori);
+
+	const std::string &getName() const;
+	void               equip(AMateria *materia);
+	void               unequip(int idx);
+	void               use(int idx, ICharacter &target);
+	AMateria          *getMateria(int idx) const;
+
+  private:
+	std::string _name;
+	AMateria   *_materia[MAX_MATERIA];
 };

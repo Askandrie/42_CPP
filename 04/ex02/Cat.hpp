@@ -11,26 +11,25 @@
 /* ************************************************************************** */
 
 #pragma once
+#include "../../colors/Colors.hpp"
 #include "AAnimal.hpp"
 #include "Brain.hpp"
-#include "../../Colors.hpp"
-#include <string>
 #include <iostream>
+#include <string>
 
 class Cat : public AAnimal
 {
-    private:
-        Brain *brain;
-        
-    public:
-        Cat();
-        Cat(const Cat &src);
-        Cat &operator=(const Cat &ori);
-        ~Cat();
-    
-        virtual void makeSound();
-        void setIdea(std::string idea, unsigned int i);
-        std::string getIdeas(unsigned int i) const;
-        void printAllIdeas();
-};
+  private:
+	Brain *brain;
 
+  public:
+	Cat();
+	Cat(const Cat &src);
+	Cat &operator=(const Cat &ori);
+	~Cat();
+
+	virtual void makeSound();
+	void         setIdea(std::string idea, unsigned int i);
+	std::string  getIdeas(unsigned int i) const;
+	void         printAllIdeas();
+};

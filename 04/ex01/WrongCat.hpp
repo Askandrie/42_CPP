@@ -15,11 +15,11 @@
 
 class WrongCat : public WrongAnimal
 {
-    public:
-        WrongCat();
-        WrongCat(const WrongCat &src);
-        WrongCat &operator=(const WrongCat &ori);
-        virtual ~WrongCat();
-    
-        virtual void makeSound() const;
+  public:
+	WrongCat();
+	WrongCat(const WrongCat &src);
+	WrongCat &operator=(const WrongCat &ori);
+	virtual ~WrongCat();
+
+	virtual void makeSound() const;
 };

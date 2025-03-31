@@ -11,19 +11,19 @@
 /* ************************************************************************** */
 
 #pragma once
+#include "../../colors/Colors.hpp"
 #include "AMateria.hpp"
 #include "ICharacter.hpp"
-#include "../../Colors.hpp"
 #include <iostream>
 #include <string>
 
 class Ice : public AMateria
 {
-    public:
-        Ice();
-        Ice(Ice const & ori);
-        Ice &operator=(Ice const & ori);
-        ~Ice();
-        AMateria* clone() const;
-        void use(ICharacter& target);
+  public:
+	Ice();
+	Ice(Ice const &ori);
+	Ice &operator=(Ice const &ori);
+	~Ice();
+	AMateria *clone() const;
+	void      use(ICharacter &target);
 };

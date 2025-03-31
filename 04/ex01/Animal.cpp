@@ -14,34 +14,38 @@
 
 Animal::Animal() : type("Animal")
 {
-    std::cout << BLU <<"Animal" << RESET << "\tdefault constructor called" << std::endl;
+	std::cout << BLU << "Animal" << RESET << "\tdefault constructor called"
+	          << std::endl;
 }
 
 Animal::Animal(const Animal &src)
 {
-    std::cout << BLU <<"Animal" << RESET << "\tcopy constructor called" << std::endl;
-    *this = src;
+	std::cout << BLU << "Animal" << RESET << "\tcopy constructor called"
+	          << std::endl;
+	*this = src;
 }
 
 Animal &Animal::operator=(const Animal &ori)
 {
-    std::cout << BLU <<"Animal" << RESET << "\tassignment operator called" << std::endl;
-    if (this != &ori)
-        this->type = ori.type;
-    return *this;
+	std::cout << BLU << "Animal" << RESET << "\tassignment operator called"
+	          << std::endl;
+	if (this != &ori)
+		this->type = ori.type;
+	return *this;
 }
 
 Animal::~Animal()
 {
-    std::cout << RED <<"Animal" << "\tdestructor called" << RESET << std::endl;
+	std::cout << RED << "Animal"
+	          << "\tdestructor called" << RESET << std::endl;
 }
 
 void Animal::makeSound() const
 {
-    std::cout << "Animal sound" << std::endl;
+	std::cout << "Animal sound" << std::endl;
 }
 
 std::string Animal::getType() const
 {
-    return this->type;
+	return this->type;
 }
