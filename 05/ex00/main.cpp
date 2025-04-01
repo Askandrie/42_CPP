@@ -1,24 +1,32 @@
 /**
- * @ Author: Askandrie
- * @ Create Time: 2025-03-24 19:13:48
- * @ Modified by: Askandrie
- * @ Modified time: 2025-03-25 21:06:12
- * @ Description:
+ * @ Author: Aska
+ * @ Create Time: 2025-03-31 01:23:27
+ * @ Modified by: Aska
+ * @ Modified time: 2025-04-01 04:11:03
  */
 
 #include "../../colors/Colors.hpp"
 #include "Bureaucrat.hpp"
 
+static void print_title(std::string title)
+{
+	std::cout << std::endl
+	          << WHI "-------------------------------------------------------"
+	          << std::endl
+	          << BHBLU << title << RESET << std::endl
+	          << WHI "-------------------------------------------------------"
+	          << RESET << std::endl
+	          << std::endl;
+}
+
 int main(void)
 {
+	print_title("Scope 1");
 	{
-		std::cout << BBLU "Constructing" RESET << std::endl;
+		print_title("Constructing");
 		Bureaucrat *a = new Bureaucrat();
-		std::cout << std::endl;
 
-		std::cout << BHBLU "Testing" RESET << std::endl;
-		std::cout << *a << std::endl;
-
+		print_title("Testing");
 		try
 		{
 			a->incrementGrade();
@@ -28,9 +36,7 @@ int main(void)
 			std::cerr << YEL "Incrementing grade of " << a->getName()
 			          << " failed: " << e.what() << RESET << std::endl;
 		}
-
 		std::cout << *a << std::endl;
-
 		try
 		{
 			a->decrementGrade();
@@ -40,9 +46,7 @@ int main(void)
 			std::cerr << YEL "Decrementing grade of " << a->getName()
 			          << " failed: " << e.what() << RESET << std::endl;
 		}
-
 		std::cout << *a << std::endl;
-
 		try
 		{
 			a->decrementGrade();
@@ -52,24 +56,17 @@ int main(void)
 			std::cerr << YEL "Decrementing grade of " << a->getName()
 			          << " failed: " << e.what() << RESET << std::endl;
 		}
-
 		std::cout << *a << std::endl;
-		std::cout << std::endl;
 
-		std::cout << BBLU "Deconstructing" RESET << std::endl;
+		print_title("Deconstructing");
 		delete a;
-		std::cout << std::endl;
 	}
-	std::cout << "-------------------------------------------------------"
-	          << std::endl;
+	print_title("Scope 2");
 	{
-		std::cout << std::endl;
-		std::cout << BBLU "Constructing" RESET << std::endl;
+		print_title("Constructing");
 		Bureaucrat *a = new Bureaucrat(1);
-		std::cout << std::endl;
-		std::cout << BHBLU "Testing" RESET << std::endl;
-		std::cout << *a << std::endl;
 
+		print_title("Testing");
 		try
 		{
 			a->decrementGrade();
@@ -79,9 +76,7 @@ int main(void)
 			std::cerr << YEL "Decrementing grade of " << a->getName()
 			          << " failed: " << e.what() << RESET << std::endl;
 		}
-
 		std::cout << *a << std::endl;
-
 		try
 		{
 			a->incrementGrade();
@@ -91,9 +86,7 @@ int main(void)
 			std::cerr << YEL "Incrementing grade of " << a->getName()
 			          << " failed: " << e.what() << RESET << std::endl;
 		}
-
 		std::cout << *a << std::endl;
-
 		try
 		{
 			a->incrementGrade();
@@ -103,21 +96,15 @@ int main(void)
 			std::cerr << YEL "Incrementing grade of " << a->getName()
 			          << " failed: " << e.what() << RESET << std::endl;
 		}
-
 		std::cout << *a << std::endl;
-		std::cout << std::endl;
 
-		std::cout << BBLU "Deconstructing" RESET << std::endl;
+		print_title("Deconstructing");
 		delete a;
-		std::cout << std::endl;
 	}
-	std::cout << "-------------------------------------------------------"
-	          << std::endl;
+	print_title("Scope 3");
 	{
-		std::cout << std::endl;
-		std::cout << BBLU "Constructing" RESET << std::endl;
+		print_title("Constructing");
 		Bureaucrat *a = NULL;
-
 		try
 		{
 			a = new Bureaucrat(0);
@@ -128,23 +115,17 @@ int main(void)
 			          << RESET << std::endl;
 		}
 
+		print_title("Testing");
 		if (a != NULL)
 		{
-			std::cout << std::endl;
-
-			std::cout << BBLU "Deconstructing b" RESET << std::endl;
+			print_title("Deconstructing");
 			delete a;
 		}
-
-		std::cout << std::endl;
 	}
-	std::cout << "-------------------------------------------------------"
-	          << std::endl;
+	print_title("Scope 4");
 	{
-		std::cout << std::endl;
-		std::cout << BBLU "Constructing" RESET << std::endl;
+		print_title("Constructing");
 		Bureaucrat *a = NULL;
-
 		try
 		{
 			a = new Bureaucrat(160);
@@ -155,47 +136,35 @@ int main(void)
 			          << RESET << std::endl;
 		}
 
+		print_title("Testing");
 		if (a != NULL)
 		{
-			std::cout << std::endl;
-			std::cout << BBLU "Deconstructing b" RESET << std::endl;
+			print_title("Deconstructing");
 			delete a;
 		}
 		std::cout << std::endl;
 	}
-	std::cout << "-------------------------------------------------------"
-	          << std::endl;
+	print_title("Scope 5");
 	{
-		std::cout << std::endl;
-		std::cout << BBLU "Constructing" RESET << std::endl;
-		Bureaucrat *a = new Bureaucrat("Peter", 120);
-		std::cout << std::endl;
+		print_title("Constructing A");
+		Bureaucrat *a = new Bureaucrat("Akira Yamaoka", 120);
 
-		std::cout << BBLU "Testing a" RESET << std::endl;
-		std::cout << a << std::endl;
-
+		print_title("Testing A");
 		a->decrementGrade();
+		std::cout << *a << std::endl;
 
-		std::cout << a << std::endl;
-		std::cout << std::endl;
-
-		std::cout << BBLU "Constructing b" RESET << std::endl;
+		print_title("Constructing B");
 		Bureaucrat *b = new Bureaucrat(*a);
-		std::cout << std::endl;
 
-		std::cout << BBLU "Deconstructing a" RESET << std::endl;
+		print_title("Deconstructing A");
 		delete a;
-		std::cout << std::endl;
 
-		std::cout << BBLU "Testing b" RESET << std::endl;
-		std::cout << b;
+		print_title("Testing B");
+		std::cout << *b << std::endl;
 		b->decrementGrade();
-		std::cout << b;
-		std::cout << std::endl;
+		std::cout << *b << std::endl;
 
-		std::cout << BBLU "Deconstructing b" RESET << std::endl;
+		print_title("Deconstructing B");
 		delete b;
-
-		std::cout << std::endl;
 	}
 }
