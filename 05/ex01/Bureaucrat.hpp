@@ -2,7 +2,7 @@
  * @ Author: Askandrie
  * @ Create Time: 2025-03-19 02:34:31
  * @ Modified by: Aska
- * @ Modified time: 2025-04-24 17:08:40
+ * @ Modified time: 2025-04-04 17:15:02
  * @ Description:
  */
 
@@ -11,11 +11,12 @@
 
 #include <exception>
 #include <iostream>
+#include <string>
 
 #define DEFAULT_GRADE 150
 #define DEFAULT_NAME "Default"
 
-#include <string>
+class Form;
 
 class Bureaucrat
 {
@@ -36,6 +37,7 @@ class Bureaucrat
 	std::string getName() const;
 	int         getGrade() const;
 
+	bool signForm(Form &form) const;
 	void setGrade(int grade);
 	void incrementGrade();
 	void decrementGrade();
